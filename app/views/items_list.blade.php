@@ -2,13 +2,10 @@
 	<table class="table table-hover table-striped">
 		<thead>
 			<tr>
-				<th>DNI</th>
+				<th></th>
+				<th>Codigo</th>
 				<th>Nombre</th>
-				<th>Apellido</th>
-				<th>Mail</th>
-				<th>Tel.</th>
-				<th>Cel.</th>
-				<th>Matricula</th>
+				<th>Descripcion</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -16,13 +13,16 @@
 			
 				@foreach($model  as $models)
 				<tr>
-					<td>{{$models->dni}}</td>
+					<td>
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<a href="#" class="thumbnail">
+								<img src="{{$models->image}}" alt="">
+							</a>
+						</div>
+					</td>
+					<td>{{$models->code}}</td>
 					<td>{{$models->name}}</td>
-					<td>{{$models->last_name}}</td>
-					<td>{{$models->email}}</td>
-					<td>{{$models->phone}}</td>
-					<td>{{$models->cell_phone}}</td>
-					<td>{{$models->license}}</td>
+					<td>{{$models->description}}</td>
 					<td>
 						<div class="btn-group btn-group-xs">
 							<a href="{{route($ruta.'_edit_form',$models->id)}}" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-edit"></i></a>

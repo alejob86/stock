@@ -17,11 +17,20 @@ class BaseController extends Controller {
 
 	
 	//inicio
-	public function getIndex()
+	public function getIndex($model= null , $search = null)
 	{
 		$model 						= $this->data['model'];
 		$this->data['seccion']		= 'Inicio';
-		$this->data['model'] 	 	= $model::paginate('10');
+
+		if(isset($search))
+		{
+			$this->data['model'] 	= $model::where('name','like','%'.$search.'%')->orderBy('name','ASC')->paginate('10');
+		}
+		else
+		{
+			$this->data['model'] 	= $model::orderBy('name','ASC')->paginate('10');
+		}
+			
 
 		return View::make('view')->with($this->data);
 	}
@@ -65,7 +74,6 @@ class BaseController extends Controller {
 	//post edit
 	public function postEdit($id = null)
 	{	
-
 		$model = $this->data['model'];
 	 	$model = $model::find($id);
 

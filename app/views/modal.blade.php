@@ -6,12 +6,12 @@
 
 	<div class="modal-body">
 		@if(isset($model_edit))
-			{{Form::model($model_edit,  array('route' => array('post_edit_item', $model_edit->id)) ) }}
+			{{Form::model($model_edit,  array('route' => array($ruta.'_post_edit', $model_edit->id)) ) }}
 		@else
-			{{Form::open(array('route'=>'post_new_item' ,'class'=>'form-horizontal'))}}
+			{{Form::open(array('route'=>$ruta.'_post_new' ,'class'=>'form-horizontal'))}}
 		@endif
 
-		@include($model.'_form')
+			@include($model.'_form')
 
 		<hr>
 		
@@ -20,6 +20,6 @@
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 	</div>
 
-
+	
 	{{Form::close()}}	
 

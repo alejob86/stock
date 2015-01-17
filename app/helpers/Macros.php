@@ -1,4 +1,14 @@
 <?php
+    
+    Form::macro('provider', function($name, $label)
+        {
+            $prov = providers::lists('name','id');
+            $input = Form::select($name , $prov ,null, array('class'=>'form-control')); 
+
+            return buildInput($input,$label);  
+        });
+
+
 
  	Form::macro('date', function($name)
         {

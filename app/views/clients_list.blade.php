@@ -8,7 +8,7 @@
 				<th>Mail</th>
 				<th>Tel.</th>
 				<th>Cel.</th>
-				<th>Matricula</th>
+				<th>CUIT</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -22,7 +22,7 @@
 					<td>{{$models->email}}</td>
 					<td>{{$models->phone}}</td>
 					<td>{{$models->cell_phone}}</td>
-					<td>{{$models->license}}</td>
+					<td>{{$models->ciut}}</td>
 					<td>
 						<div class="btn-group btn-group-xs">
 							<a href="{{route($ruta.'_edit_form',$models->id)}}" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-edit"></i></a>

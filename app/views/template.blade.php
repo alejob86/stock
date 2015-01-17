@@ -4,11 +4,18 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Title Page</title>
+		<title>STOCK</title>
 
 		<!-- Bootstrap CSS -->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+
+		<style type="text/css">
+			body{
+				background-color: #D4DED9;
+				font-size: 13px;
+			}
+		</style>
 		@yield('css')
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -17,17 +24,11 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<style>
-		.datepicker{
-		
-						z-index: 100000;
-					}
-		</style>
+
 	</head>
 	<body>
 
-			@include('menu')
-
+		@include('menu')
 
 		<div class="container">
 			@yield('content')
