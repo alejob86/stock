@@ -11,7 +11,12 @@
 |I
 */
 
+Route::get('update',function()
+{
 
+	return 	DBupdate::getUpdate();
+
+});
 
 
 Route::get('/', function()

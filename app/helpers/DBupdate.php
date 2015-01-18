@@ -82,10 +82,12 @@ class DBupdate
 
 			
 		});
+	
+	}
 
-
-
-		
+	public static function getUpdate()
+	{
+		return "updating...";
 	}	
 }
 
