@@ -3,7 +3,7 @@
     Form::macro('provider', function($name, $label)
         {
             $prov = providers::lists('name','id');
-            $input = Form::select($name , $prov ,null, array('class'=>'form-control')); 
+            $input = Form::select($name , array('Ninguno') + $prov ,null, array('class'=>'form-control')); 
 
             return buildInput($input,$label);  
         });
