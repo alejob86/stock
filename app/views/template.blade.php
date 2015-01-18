@@ -30,6 +30,8 @@
 
 		@include('menu')
 
+		hola
+		
 		<div class="container">
 			@yield('content')
 		</div>
