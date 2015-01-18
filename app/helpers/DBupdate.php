@@ -87,7 +87,7 @@ class DBupdate
 
 	public static function getUpdate()
 	{
-		return "updating... Loricaidae.... Viehha el agua.... nuevo El Iphone ...";
+		return "updating...";
 	}	
 }
 
