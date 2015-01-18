@@ -33,9 +33,8 @@
 
 	</head>
 	<body>
-		hola
 		@include('menu')
-
+		hola
 		<div class="container">
 			@yield('content')
 		</div>
