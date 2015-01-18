@@ -4,17 +4,23 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>STOCK</title>
+		<title>{ stock }</title>
 
 		<!-- Bootstrap CSS -->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
 		<style type="text/css">
-			body{
+			body
+			{
 				background-color: #D4DED9;
-				font-size: 13px;
+				font-size: 12px;
+				font-family: Verdana, Geneva, sans-serif;
 			}
+
+
+
+
 		</style>
 		@yield('css')
 
@@ -30,8 +36,6 @@
 
 		@include('menu')
 
-		hola
-		
 		<div class="container">
 			@yield('content')
 		</div>
