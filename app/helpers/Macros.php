@@ -8,8 +8,6 @@
             return buildInput($input,$label);  
         });
 
-
-
  	Form::macro('date', function($name)
         {
             $value = Form::getValueAttribute($name);
@@ -40,6 +38,33 @@
           	
         });
 
+    Form::macro('number', function($name, $label, $step)
+        {    
+            $value = Form::getValueAttribute($name);
+            $input = '<input type="number" class="form-control" name="'.$name.'" value='.$value.' step="'.$step.'" >';
+    
+            return buildInput($input,$label);         
+            
+        });
+
+    Form::macro('categorias', function($name)
+    {
+        $var = '<ul class="list-group">';
+        
+            foreach(categories::all() as $category)
+            {
+                $var .= '<li class="list-group-item">
+                            <input type="checkbox" name="chk_category[]" 
+                                value="'.$category->id.'"
+                            >'.$category->name.'
+                        </li>'; 
+            } 
+                                        
+            
+        $var .= '</ul>';
+
+        return $var;        
+    });
 
 
 //armamos el div con el label y el input

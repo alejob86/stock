@@ -21,5 +21,4 @@
 	</div>
 
 	
-	{{Form::close()}}	
-
+	{{Form::close()}}

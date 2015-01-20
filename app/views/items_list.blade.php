@@ -9,8 +9,7 @@
 				<th></th>
 			</tr>
 		</thead>
-		<tbody>
-			
+		<tbody>			
 				@foreach($model  as $models)
 				<tr>
 					<td>
@@ -31,7 +30,6 @@
 					</td>
 				</tr>
 				@endforeach
-
 		</tbody>
 	</table>
 
