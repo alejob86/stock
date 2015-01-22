@@ -1,5 +1,9 @@
 @extends('template')
 
+	@section('menu')
+		@include('menu')
+	@endsection
+
 	@section('content')
 
 		<div class="panel panel-default">
@@ -19,7 +23,7 @@
 					{{Form::close()}}
 					
 					<div class="col-xs-2 pull-right text-center">
-						<a aria-label="Left Align" href="{{route($ruta.'_new_form')}}" class="btn  btn-primary" data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+						<a aria-label="Left Align" href="{{route($ruta.'_new_form')}}" class="btn  btn-warning" data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
 							</a>
 					</div>
 				</div>
