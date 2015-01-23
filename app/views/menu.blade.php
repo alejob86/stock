@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
@@ -21,18 +22,24 @@
 
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-
+			
 			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name}}  <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a href="#">Perfil</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li><a href="#">Separated link</a></li>
 				</ul>
 			</li>
 
-			<li><button type="button" class="btn btn-xs navbar-btn"><i class="glyphicon glyphicon-log-out"></i></button></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i>  <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Usuarios</a></li>
+					<li><a href="#">Perfiles</a></li>
+				</ul>
+			</li>
+
+			<li><a href="{{route('logout')}}"><i class="glyphicon glyphicon-log-out"></i></a>
+			</li>
 
 			<li><ul></ul>
 			</li>

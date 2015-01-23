@@ -1,5 +1,11 @@
 @extends('template')
-	@section('content')
-	
+
+	@section('menu')
+		@include('menu')
 	@endsection
+
+	@section('content')
+		<h1>Welcome..</h1>
+	@endsection
+
 @stop
