@@ -1,0 +1,172 @@
+[1mdiff --git a/app/controllers/ItemsController.php b/app/controllers/ItemsController.php[m
+[1mindex aee45aa..e726a41 100644[m
+[1m--- a/app/controllers/ItemsController.php[m
+[1m+++ b/app/controllers/ItemsController.php[m
+[36m@@ -11,6 +11,98 @@[m [mclass ItemsController extends BaseController[m
+ 		$this->data['modulo'] 		= 'Articulos';[m
+ 		$this->data['seccion']		= '';[m
+ 	}[m
+[32m+[m
+[32m+[m	[32m//post nuevo[m
+[32m+[m	[32mpublic function postNew()[m
+[32m+[m	[32m{[m[41m	[m
+[32m+[m		[32m$model = $this->data['model'];[m
+[32m+[m	[41m [m	[32m$model::create(Input::all());[m
+[32m+[m
+[32m+[m	[41m [m	[32mreturn Redirect::back();[m
+[32m+[m[41m	 	[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m	[41m [m	[32m$input 	= Input::all();[m
+[32m+[m		[32m$up 	= new upload();[m
+[32m+[m		[32m$up 	= $up->up($input['image'] ,'public/items/images/');[m[41m		[m
+[32m+[m
+[32m+[m		[32mif( $up != false)[m
+[32m+[m		[32m{[m
+[32m+[m			[32m$input['image'] =  $up;[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m$item = Item::Create($input);[m
+[32m+[m
+[32m+[m		[32mif($item)[m
+[32m+[m		[32m{[m
+[32m+[m			[32mif (isset($input["chk_category"]))[m
+[32m+[m			[32m{[m
+[32m+[m				[32mforeach ($input["chk_category"] as $category)[m
+[32m+[m				[32m{[m
+[32m+[m					[32m$itemsCategories = new ItemsCategories();[m
+[32m+[m					[32m$itemsCategories->item_id = $item->id;[m
+[32m+[m					[32m$itemsCategories->category_id = $category;[m
+[32m+[m					[32m$itemsCategories->save();[m
+[32m+[m				[32m}[m
+[32m+[m			[32m}[m[41m			[m
+[32m+[m			[32mreturn Redirect::to('item')->with('success','Registro Creado Correctamente');[m[41m			[m
+[32m+[m		[32m}else{[m
+[32m+[m			[32mreturn Redirect::to('item')->with('warning','Ocurrio un error creando el Registro');[m
+[32m+[m		[32m}[m[41m		[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32m//post edit[m
+[32m+[m	[32mpublic function postEdit($id = null)[m
+[32m+[m	[32m{[m[41m	[m
+[32m+[m		[32m$model = $this->data['model'];[m
+[32m+[m	[41m [m	[32m$model = $model::find($id);[m
+[32m+[m
+[32m+[m	[41m [m	[32m$model->fill(Input::all());[m
+[32m+[m	[41m [m	[32m$model->save();[m
+[32m+[m[41m	 [m
+[32m+[m	[41m [m	[32mreturn Redirect::back();[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m	[41m [m	[32m$item = Item::find(Crypt::decrypt($id));[m
+[32m+[m
+[32m+[m		[32m$post_data 	= Input::all();[m
+[32m+[m
+[32m+[m		[32mif( ! empty($post_data['image']) )[m[41m [m
+[32m+[m		[32m{[m
+[32m+[m			[32m$up = new upload();[m
+[32m+[m			[32m$up = $up->up($post_data['image'] ,'public/items/images/');[m[41m		[m
+[32m+[m
+[32m+[m			[32mif( $up != false )[m
+[32m+[m			[32m{[m
+[32m+[m				[32m$post_data['image'] =  $up;[m
+[32m+[m			[32m}[m
+[32m+[m		[32m}else[m[41m [m
+[32m+[m		[32m{[m
+[32m+[m			[32m$post_data['image'] = $item->image;[m
+[32m+[m		[32m}[m
+[32m+[m[41m				[m
+[32m+[m		[32m$item->fill($post_data);[m
+[32m+[m
+[32m+[m		[32mItemsCategories::where('item_id', '=', $item->id)->delete();[m
+[32m+[m
+[32m+[m		[32mif(isset($post_data["chk_category"]))[m
+[32m+[m		[32m{[m
+[32m+[m			[32mforeach ($post_data["chk_category"] as $category)[m
+[32m+[m			[32m{[m
+[32m+[m				[32m$itemsCategories = new ItemsCategories();[m
+[32m+[m				[32m$itemsCategories->item_id = $item->id;[m
+[32m+[m				[32m$itemsCategories->category_id = $category;[m
+[32m+[m				[32m$itemsCategories->save();[m[41m				[m
+[32m+[m			[32m}[m
+[32m+[m		[32m}[m
+[32m+[m[41m		[m
+[32m+[m		[32m$item->save();[m
+[32m+[m		[32mreturn Redirect::to('item')->with('success','Registro Editado Correctamente');[m
+[32m+[m	[32m}[m
+[32m+[m
+ }[m
+ [m
+ ?>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/views/items_form.blade.php b/app/views/items_form.blade.php[m
+[1mindex 8fb842f..8bdf979 100644[m
+[1m--- a/app/views/items_form.blade.php[m
+[1m+++ b/app/views/items_form.blade.php[m
+[36m@@ -7,7 +7,17 @@[m
+     {{ Form::label('label', 'Rubro', array('class' => 'control-label')) }} [m
+          [m
+     {{ Form::categorias('categorias') }}           [m
+[31m-  [m
+[32m+[m[41m  	[m
+[32m+[m[41m  [m	[32m<!-- Build your select: -->[m
+[32m+[m[32m    <select id="example-getting-started" multiple="multiple" >[m
+[32m+[m	[32m    <option value="cheese">Cheese</option>[m
+[32m+[m	[32m    <option value="tomatoes">Tomatoes</option>[m
+[32m+[m	[32m    <option value="mozarella">Mozzarella</option>[m
+[32m+[m	[32m    <option value="mushrooms">Mushrooms</option>[m
+[32m+[m	[32m    <option value="pepperoni">Pepperoni</option>[m
+[32m+[m	[32m    <option value="onions">Onions</option>[m
+[32m+[m[32m    </select>[m
+[32m+[m
+     {{ Form::number('cost_price','Precio de compra','0.01') }}      [m
+     {{ Form::number('sell_price','Precio de venta','0.01') }} [m
+     {{ Form::number('rent_price_15_days','Precio de alquiler por 15 dias','0.01') }} [m
+[1mdiff --git a/app/views/template.blade.php b/app/views/template.blade.php[m
+[1mindex 886f376..6fca47a 100644[m
+[1m--- a/app/views/template.blade.php[m
+[1m+++ b/app/views/template.blade.php[m
+[36m@@ -10,6 +10,9 @@[m
+ 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">[m
+ 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">[m
+ [m
+[32m+[m		[32m<!-- Include the plugin's CSS: -->[m
+[32m+[m		[32m<link rel="stylesheet" href="multiselect/css/bootstrap-multiselect.css" type="text/css"/>[m
+[32m+[m
+ 		<style type="text/css">[m
+ 			body[m
+ 			{[m
+[36m@@ -46,6 +49,8 @@[m
+ 		<!-- Bootstrap JavaScript -->[m
+ 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>[m
+ [m
+[32m+[m		[32m<!-- Include the plugin's JS: -->[m
+[32m+[m		[32m<script type="text/javascript" src="multiselect/js/bootstrap-multiselect.js"></script>[m
+ 			@yield('js')[m
+ 			[m
+ 		<script type="text/javascript">[m
+[1mdiff --git a/app/views/view.blade.php b/app/views/view.blade.php[m
+[1mindex 2995868..6ea1ff3 100644[m
+[1m--- a/app/views/view.blade.php[m
+[1m+++ b/app/views/view.blade.php[m
+[36m@@ -56,5 +56,16 @@[m
+ 				$(this).removeData('bs.modal');[m
+ 			});[m
+ 		</script>[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m	[32m    <!-- Initialize the plugin: -->[m
+[32m+[m	[32m    <script type="text/javascript">[m
+[32m+[m		[32m    $(document).ready(function() {[m
+[32m+[m		[41m    [m	[32m$('#example-getting-started').multiselect();[m
+[32m+[m		[32m    });[m
+[32m+[m	[32m    </script>[m
+[32m+[m
+[32m+[m
+ 	@endsection[m
+ @stop[m
+\ No newline at end of file[m

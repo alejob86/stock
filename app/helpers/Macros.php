@@ -38,10 +38,10 @@
           	
         });
 
-    Form::macro('number', function($name, $label, $step)
+    Form::macro('number', function($name, $label, $step, $minimum)
         {    
             $value = Form::getValueAttribute($name);
-            $input = '<input type="number" class="form-control" name="'.$name.'" value='.$value.' step="'.$step.'" >';
+            $input = '<input type="number" class="form-control" name="'.$name.'" value='.$value.' step="'.$step.'" min="'.$minimum.'">';
     
             return buildInput($input,$label);         
             
