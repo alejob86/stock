@@ -49,19 +49,21 @@
 
     Form::macro('categorias', function($name)
     {
-        $var = '<ul class="list-group">';
+
+        $var = '  <div style="max-height: 200px;  overflow-y: scroll;" >
+            
+                    <ul class="list-group">';
         
-            foreach(categories::all() as $category)
+            foreach(categories::orderBy('name','ASC')->get() as $category)
             {
                 $var .= '<li class="list-group-item">
                             <input type="checkbox" name="chk_category[]" 
                                 value="'.$category->id.'"
-                            >'.$category->name.'
-                        </li>'; 
+                            >  '.$category->name.'</li>'; 
             } 
                                         
             
-        $var .= '</ul>';
+        $var .= '</ul></div>';
 
         return $var;        
     });
