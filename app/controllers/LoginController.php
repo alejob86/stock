@@ -10,7 +10,8 @@ class LoginController extends BaseController
 		
 		if(Auth::attempt(array('name' => $input['username'], 'password' => $input['password']),$remember))
 		{
-			return Redirect::route('index');
+			Session::put('company',Auth::user()->company);
+			return Redirect::to( Auth::user()->company .'/inicio');
 		}
 		else
 		{
