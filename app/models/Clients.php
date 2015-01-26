@@ -1,6 +1,6 @@
 <?php
 
-class clients extends Eloquent
+class Clients extends Eloquent
 {
 	protected $table	 = 'clients';
 	protected $guarded	 = array('');

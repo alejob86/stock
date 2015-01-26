@@ -1,6 +1,6 @@
 <?php
 
-class providers extends Eloquent
+class Providers extends Eloquent
 {
 	protected $table 	= 'providers';
 	protected $guarded 	= array('');

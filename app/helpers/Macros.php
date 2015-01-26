@@ -2,7 +2,7 @@
     
     Form::macro('provider', function($name, $label)
         {
-            $prov = providers::lists('name','id');
+            $prov = Providers::lists('name','id');
             $input = Form::select($name , array('Ninguno') + $prov ,null, array('class'=>'form-control')); 
 
             return buildInput($input,$label);  
@@ -47,14 +47,14 @@
             
         });
 
-    Form::macro('categorias', function($name)
+    Form::macro('categories', function($name)
     {
 
         $var = '  <div style="max-height: 200px;  overflow-y: scroll;" >
             
                     <ul class="list-group">';
         
-            foreach(categories::orderBy('name','ASC')->get() as $category)
+            foreach(Categories::orderBy('name','ASC')->get() as $category)
             {
                 $var .= '<li class="list-group-item">
                             <input type="checkbox" name="chk_category[]" 

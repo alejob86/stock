@@ -6,11 +6,10 @@ class LoginController extends BaseController
 	{
 		$input    = Input::all();
 		$remember = Input::has('remember') ? true : false ;
-
 		
 		if(Auth::attempt(array('name' => $input['username'], 'password' => $input['password']),$remember))
 		{
-			Session::put('company',Auth::user()->company);
+			//Session::put('company',Auth::user()->company);
 			return Redirect::to( Auth::user()->company .'/inicio');
 		}
 		else
@@ -22,7 +21,6 @@ class LoginController extends BaseController
 	public function logOut()
 	{
 		Auth::logout();
-
 		return Redirect::to('login');
 	}
 }
