@@ -9,7 +9,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" style='color:#F0AD4E;'> <strong>{</strong> stock <strong>} {{Session::get('company')}}</strong> </a>
+		<a class="navbar-brand" style='color:#F0AD4E;'> <strong>{</strong> stock <strong>}</strong> </a>
 	</div>
 
 
@@ -19,6 +19,8 @@
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-th-list"></i> Menu</a>
 				<ul class="dropdown-menu">
+					<li><a href="inicio"><span class="glyphicon glyphicon-home"></span></a></li>
+					 <li class="divider"></li>
 					<li><a href="{{route('items')}}">Articulos</a></li>
 					<li><a href="{{route('doctors')}}">Doctores</a></li>
 					<li><a href="{{route('clients')}}">Clientes</a></li>
