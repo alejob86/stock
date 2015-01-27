@@ -5,7 +5,9 @@
 	@endsection
 
 	@section('content')
-		<h1>Welcome..</h1>
+		<h4>Bienvenido</h4>
+		<h3>{{Session::get('company')}}</h3>
+		<h4>{{Auth::user()->name}}</h4>
 	@endsection
 
 @stop

@@ -14,7 +14,7 @@
 			body
 			{
 				background-color: #D4DED9;
-				font-size: 12px;
+				/*font-size: 12px;*/
 				font-family: Verdana, Geneva, sans-serif;
 			}
 

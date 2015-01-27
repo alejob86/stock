@@ -11,6 +11,32 @@
 |I
 */
 
+Route::get('init', function(){
+
+	$data = new CreateProfiles();
+	$data->up();
+	
+});
+
+Route::get('/{empresa}', function($empresa)
+{
+
+		//cambia en nombre de tabla segun usuario
+		DB::disconnect('mysql');
+		Config::set('database.connections.mysql.database','admin_stockx');
+
+		//$company = Company::all()->first();
+		
+		//Session::put('company',$company);
+
+		//return Config::get('database.connections.mysql');
+		//return View::make('index');
+
+		Session::put('company',$empresa);
+
+		return Redirect::to($empresa.'/login');
+});
+
 
 
 Route::get('update',function()
@@ -19,27 +45,25 @@ Route::get('update',function()
 });
 
 
-Route::post('login',array('as'=>'post_login', 'uses'=>'LoginController@login'));
-
-
-Route::get('login',function(){
-
-	return View::make('login');
-});
-
-
-Route::group(array('before' => 'auth'), function()
+Route::group(array('prefix'=> Session::get('company')),function()
 {
 
-	Route::group(array('prefix'=> Session::get('company') ),function()
-	{
+	Route::post('login',array('as'=>'post_login', 'uses'=>'LoginController@login'));
 
-		Route::get('inicio', array('as'=>'index', 'uses'=>'HomeController@getInicio'));
+
+	Route::get('login',function(){
+
+		return View::make('login');
+	});
+
+
+
+	Route::group(array('before' => 'auth'), function()
+	{
+		//Route::get('inicio', array('as'=>'index', 'uses'=>'HomeController@getInicio'));
 		Route::get('salir',  array('as'=>'logout', 'uses'=>'LoginController@logOut'));
 
-
-
-		Route::get('/', function()
+		Route::get('inicio', function()
 		{
 			return View::make('index');
 		});
@@ -86,6 +110,12 @@ Route::group(array('before' => 'auth'), function()
 		Route::post('clientes_editar/{id?}', 	array('as' => 'clients_post_edit', 'uses' 	=> 'ClientsController@postEdit'));
 
 	});
+
+
+
 });
+
+
+
 
 
