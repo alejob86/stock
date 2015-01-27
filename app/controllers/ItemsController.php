@@ -15,11 +15,13 @@ class ItemsController extends BaseController
 	public function postNew()
 	{
 
-		$input 	= Input::all();
+		$input 		= Input::all();
 		$categories = $input['chk_category'];
+
 		unset($input['chk_category']);
-		$up 	= new upload();
-		$up 	= $up->up($input['image'] , 'public/items/images/');
+		
+		$up 		= new upload();
+		$up 		= $up->up($input['image'] , 'public/items/images/');
 
 		if( $up != false )
 		{

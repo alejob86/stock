@@ -2,7 +2,7 @@
   {{Form::texto('code','Codigo', array('required'))}}
   {{Form::texto('name','Nombre')}}
   {{Form::texto('description','Descripcion')}}
-  {{Form::provider('provider_id','Proveedor')}}
+  {{Form::providers('provider_id','Proveedor')}}
 
   {{ Form::number('cost_price','Precio de compra','0.01', '0') }}      
   {{ Form::number('sell_price','Precio de venta','0.01', '0') }} 
@@ -21,7 +21,7 @@
       </div>
       <div id="2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
         <div class="panel-body">    
-           {{ Form::categories('categorias') }}    
+           {{ Form::categories('categories') }}    
         </div>
       </div>
     </div>

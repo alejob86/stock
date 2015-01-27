@@ -12,7 +12,7 @@
 			  </div>
 			  <div class="panel-body">				
 				<div class="row">
-					{{Form::open(array('url'=>'buscar'))}}
+					{{Form::open(array('url'=> Session::get('company').'/buscar'))}}
 						<div class="col-xs-3">
 							<div class="input-group">
 								<input type='hidden' name='model' value='{{$ruta}}'>
@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<hr>
-				@include($ruta.'_list')
+				@include($ruta.'/'.$ruta.'_list')
 			  </div>
 		</div>
 

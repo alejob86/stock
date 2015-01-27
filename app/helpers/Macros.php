@@ -1,6 +1,6 @@
 <?php
     
-    Form::macro('provider', function($name, $label)
+    Form::macro('providers', function($name, $label)
         {
             $prov = Providers::lists('name','id');
             $input = Form::select($name , array('Ninguno') + $prov ,null, array('class'=>'form-control')); 

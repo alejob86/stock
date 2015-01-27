@@ -7,7 +7,7 @@ class DoctorsController extends BaseController
 	public function __construct()
 	{
 		$this->data['ruta'] 		= 'doctors';
-		$this->data['model'] 		= 'doctors';
+		$this->data['model'] 		= 'Doctors';
 		$this->data['modulo'] 		= 'Doctores';
 		$this->data['seccion']		= '';
 	}

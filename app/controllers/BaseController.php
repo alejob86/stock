@@ -46,6 +46,7 @@ class BaseController extends Controller {
 			$this->data['seccion']	= 'Editar';
 
 			$this->data['model_edit'] 	= $model::find($id);
+			
 			return View::make('modal')->with($this->data);
 		}
 

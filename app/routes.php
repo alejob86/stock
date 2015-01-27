@@ -23,7 +23,7 @@ Route::get('/{empresa}', function($empresa)
 
 		//cambia en nombre de tabla segun usuario
 		DB::disconnect('mysql');
-		Config::set('database.connections.mysql.database','admin_stockx');
+		Config::set('database.connections.mysql.database','admin_prueba');
 
 		//$company = Company::all()->first();
 		

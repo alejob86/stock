@@ -14,7 +14,7 @@
 			body
 			{
 				background-color: #D4DED9;
-				/*font-size: 12px;*/
+				font-size: 12px;*/
 				font-family: Verdana, Geneva, sans-serif;
 			}
 
@@ -57,7 +57,10 @@
 			//confirm delete
 			$('.del_confirm').on('click',function()
 			{
-				confirm('Desea Eliminar este registro ?');
+				if (!confirm("Desea eliminar este registro?"))
+                {
+                 return false;
+                }
 			});
 		});
 			
