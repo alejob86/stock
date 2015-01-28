@@ -57,7 +57,7 @@
             foreach(Categories::orderBy('name','ASC')->get() as $category)
             {
                 $var .= '<li class="list-group-item">
-                            <input type="checkbox" name="chk_category[]" 
+                            <input type="checkbox" name="chk_category[]"  
                                 value="'.$category->id.'"
                             >  '.$category->name.'</li>'; 
             } 

@@ -2,7 +2,7 @@
 	<table class="table table-hover table-striped">
 		<thead>
 			<tr>
-				<th></th>
+				<th width="10%"></th>
 				<th>Codigo</th>
 				<th>Nombre</th>
 				<th>Descripcion</th>
@@ -13,11 +13,14 @@
 				@foreach($model  as $models)
 				<tr>
 					<td>
-						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-							<a href="#" class="thumbnail">
-								<img src="{{$models->image}}" alt="">
-							</a>
-						</div>
+						<a href="#" class="thumbnail">
+
+							@if(!is_null($models->image))
+								<img src="{{$models->image}}" width="100%">	
+							@else
+								<img src="no_image.png" width="100%">	
+							@endif
+						</a>
 					</td>
 					<td>{{$models->code}}</td>
 					<td>{{$models->name}}</td>

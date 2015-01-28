@@ -11,15 +11,17 @@
 |I
 */
 
-Route::get('init', function(){
 
-	$data = new CreateProfiles();
-	$data->up();
-	
-});
 
 Route::get('/{empresa}', function($empresa)
 {
+		if($empresa  == 'update')
+		{
+
+			DBupdate::up();
+
+		};
+			
 
 		//cambia en nombre de tabla segun usuario
 		DB::disconnect('mysql');

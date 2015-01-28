@@ -66,6 +66,7 @@ class DBupdate
 			$table->string('talle',10);
 			$table->string('color',50);
 			$table->string('color_description',50);
+			$table->string('image',100);
 			
 
 			$table->foreign('categories_id')->references('id')->on('categories');
@@ -85,9 +86,9 @@ class DBupdate
 	
 	}
 
-	public static function getUpdate()
+	public static function up()
 	{
-		return "updating...";
+	
 	}	
 }
 

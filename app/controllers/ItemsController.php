@@ -2,7 +2,8 @@
 
 class ItemsController extends BaseController
 {
-	protected $data = array();
+	protected $data 	 =  array();
+	protected $img_path  =  'items/images/';
 
 	public function __construct()
 	{
@@ -16,26 +17,26 @@ class ItemsController extends BaseController
 	{
 
 		$input 		= Input::all();
-		$categories = $input['chk_category'];
+
+		 if(isset($input['chk_category'])){
+		 	$categories = $input['chk_category'];	
+		 }
 
 		unset($input['chk_category']);
-		
-		$up 		= new upload();
-		$up 		= $up->up($input['image'] , 'public/items/images/');
+
+		$up 		= Upload::up($input['image'] , $this->img_path);
 
 		if( $up != false )
 		{
-			$input['image'] =  $up;
+			$input['image'] =  $this->img_path .$up;
 		}
 
 		$item = Items::Create($input);
 
 		if($item)
 		{
-
 			if (isset($categories))
-			{
-				
+			{	
 				foreach ( $categories as $category )
 				{
 					$itemsCategories 				= new ItemsCategories();
@@ -44,14 +45,41 @@ class ItemsController extends BaseController
 					$itemsCategories->save();	
 				}
 				return Redirect::back()->with('success','Registro Creado Correctamente');
-			}else
+			}
+			else
 			{
 				return Redirect::back()->with('warning','Ocurrio un error asociando los items');
 			}
 					
-		}else{
+		}
+		else
+		{
 			return Redirect::back()->with('warning','Ocurrio un error creando el Registro');
 		}	
+	}
+
+
+	//post edit
+	public function postEdit($id = null)
+	{	
+
+		$input 		= Input::all();
+
+		 if(isset($input['chk_category'])){
+		 	$categories = $input['chk_category'];	
+		 }
+
+		unset($input['chk_category']);
+
+
+
+		$model = $this->data['model'];
+	 	$model = $model::find($id);
+
+	 	$model->fill(Input::all());
+	 	$model->save();
+	 
+	 	return Redirect::back();
 	}
 
 }

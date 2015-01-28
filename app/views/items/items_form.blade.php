@@ -53,7 +53,7 @@
       </div>
       <div id="5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
         <div class="panel-body">
-              {{ Form::file ('image') }}
+              {{ Form::file('image') }}
         </div>
       </div>
     </div>
