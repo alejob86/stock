@@ -2,8 +2,9 @@
 
 class DBupdate 
 {
-	public static function getCreate()
+	public static function create()
 	{
+	
 		Schema::create('users', function($table)
 		{
 			$table->increments('id');
@@ -66,13 +67,10 @@ class DBupdate
 			$table->string('talle',10);
 			$table->string('color',50);
 			$table->string('color_description',50);
-			$table->string('image',100);
 			
 
 			$table->foreign('categories_id')->references('id')->on('categories');
 			$table->foreign('brands_id')->references('id')->on('brands');
-
-			
 			$table->foreign('providers_id')->references('id')->on('providers');
 
 			$table->double('cost_price',10,2);
@@ -88,7 +86,7 @@ class DBupdate
 
 	public static function up()
 	{
-	
+		
 	}	
 }
 

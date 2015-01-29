@@ -22,9 +22,11 @@
 						</div>
 					{{Form::close()}}
 					
+						@yield('extra')
+
 					<div class="col-xs-2 pull-right text-center">
 						<a aria-label="Left Align" href="{{route($ruta.'_new_form')}}" class="btn  btn-warning" data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-							</a>
+						</a>
 					</div>
 				</div>
 				<hr>
@@ -42,16 +44,7 @@
 		</div>
 		<!-- END MODAL -->
 
-		<!--- MODAL -->
-		<div id="myModal1" class="modal fade">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<!-- Content will be loaded here from "remote.php" file -->
-				</div>
-			</div>
-		</div>
-		<!-- END MODAL -->
-
+		
 	@endsection
 
 	@section('js')

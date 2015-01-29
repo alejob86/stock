@@ -12,7 +12,7 @@
         {
             $value = Form::getValueAttribute($name);
 
-            return '<input type="text" class="datepicker " name="'.$name.'" placeholder="mm/dd/yyyy" value="'.$value.'">';
+            return '<input type="text" class="datepicker form-control " name="'.$name.'" placeholder="mm/dd/yyyy" value="'.$value.'">';
         });
 
     Form::macro('areas', function($name)

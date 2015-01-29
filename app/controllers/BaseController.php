@@ -17,18 +17,18 @@ class BaseController extends Controller {
 
 	
 	//inicio
-	public function getIndex($model= null , $search = null)
+	public function getIndex( $model= null , $search = null )
 	{
 		$model 						= $this->data['model'];
 		$this->data['seccion']		= 'Inicio';
 
 		if(isset($search))
 		{
-			$this->data['model'] 	= $model::where('name','like','%'.$search.'%')->orderBy('name','ASC')->paginate('10');
+			$this->data['model'] 	= $model::where('id' ,'like','%'.$search.'%')->orderBy('id' ,'ASC')->paginate('10');
 		}
 		else
 		{
-			$this->data['model'] 	= $model::orderBy('name','ASC')->paginate('10');
+			$this->data['model'] 	= $model::orderBy('id' ,'ASC')->paginate('10');
 		}
 			
 
