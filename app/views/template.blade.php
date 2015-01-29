@@ -36,6 +36,7 @@
 			@yield('menu')
 		<div class="container">
 			@yield('content')
+			
 		</div>
 
 		
@@ -48,7 +49,6 @@
 			@yield('js')
 			
 		<script type="text/javascript">
-
 
 		$('document').ready(function(){
 

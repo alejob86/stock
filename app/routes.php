@@ -10,7 +10,38 @@
 | and give it the Closure to execute when that URI is requested.
 |I
 */
+	
 
+		Route::get('provider_search',function()
+		{
+			$data = Input::get('term');
+
+			$resp = Providers::where('last_name','like','%'.$data.'%')->get();
+			$res  = array();
+
+			foreach($resp as $r)
+			{
+				array_push($res, $r->last_name.' , '.$r->name );
+			}
+
+			return Response::json($res);
+		});
+
+		Route::get('item_search',function()
+		{
+			$data = Input::get('term');
+
+			$resp = Items::where('code','like','%'.$data.'%')->get();
+
+			$res  = array();
+
+			foreach($resp as $r)
+			{
+				array_push($res, $r->name . ' $ '.$r->sell_price);
+			}
+
+			return Response::json($res);
+		});
 
 
 Route::get('/{empresa}', function($empresa)
@@ -37,6 +68,7 @@ Route::get('/{empresa}', function($empresa)
 
 		return Redirect::to($empresa.'/login');
 });
+
 
 
 
@@ -82,6 +114,7 @@ Route::group(array('prefix'=> Session::get('company')),function()
 		require(__DIR__ . '/routes/doctors.php');
 		require(__DIR__ . '/routes/clients.php');
 		require(__DIR__ . '/routes/purchases.php');
+
 
 	});
 
