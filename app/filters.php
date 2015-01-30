@@ -11,6 +11,19 @@
 |
 */
 
+	Route::filter('switchDB',function(){
+
+
+		// Set the tenant DB name and fire it up as the new default DB connection
+		//$db = CompanyDb::where('company_name','=',Session::get('company'))->first();
+
+		//Config::set('database.connections.mysql.database','admin_prueba');
+
+		//DB::setDefaultConnection('mysql');
+
+	});
+
+
 App::before(function($request)
 {
 

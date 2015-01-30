@@ -10,13 +10,11 @@ class LoginController extends BaseController
 		if(Auth::attempt(array('name' => $input['username'], 'password' => $input['password']),$remember))
 		{
 			//Session::put('company',Auth::user()->company);
-<<<<<<< Updated upstream
-			return Redirect::to( Auth::user()->company .'/inicio');
-=======
+
+			//return Redirect::to( Auth::user()->company .'/inicio');
 			//return Redirect::to( Auth::user()->company .'/inicio');
 			return Redirect::to(Session::get('company').'/inicio');
 			
->>>>>>> Stashed changes
 		}
 		else
 		{
@@ -27,7 +25,8 @@ class LoginController extends BaseController
 	public function logOut()
 	{
 		Auth::logout();
-		return Redirect::to('login');
+
+		return Redirect::to(Session::get('company').'/login');
 	}
 }
 ?>

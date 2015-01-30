@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'admin_prueba',
 			'username'  => 'admin',
-			'password'  => 'cholita',
+			'password'  => 'CHOLITA2014',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
