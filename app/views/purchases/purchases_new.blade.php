@@ -9,6 +9,8 @@
 		<div class="panel panel-default">
 			  <div class="panel-heading">
 					<h3 class="panel-title">{{$modulo}} : {{$seccion}}</h3>
+
+					NRO :: {{Session::get('purchase_temporal_id')}}
 			  </div>
 			  <div class="panel-body">				
 				
@@ -43,7 +45,7 @@
 					        
 					        <div class="panel-body">
 								<div class="col-xs-12">
-									<input class="form-control" placeholder='Articulo' id="item" name="item" >
+									<input class="form-control" placeholder='Articulo' id="item" name="item" data-id="">
 								</div>
 								<hr>
 								<div class="col-xs-2">
@@ -98,12 +100,56 @@
 			     $("#tags").autocomplete({      
 			     	 source: "provider_search",
 			  	 });
-
+			    /*
 				 $("#item").autocomplete({      
 			     	 source: "item_search"
 			  	 });
+				*/
+			
+				$("#item").autocomplete({
+                    source: function(request, response) {
+                        $.ajax({
+                            type: "POST",
+                            url: "item_search",
+                            data:  {search : $("#item").val() },
+                            dataType: "json",
+      						 
+      						  success: function(data){
+								//$.each(data, function(key, value) {
+								//	console.log (key);
+								//});
+
+								response(data);
+                            },                            
+                        });
+
+                    },
+                    select: function(event, ui) {
+                   		//setea el id al attr data-id del input  item
+                   		$('#item').attr('data-id',ui.item.id);
+                	}
+
+                });
+
 
 			  	 $('#add_item').on('click',function(){
+			  		 $.ajax({  
+			  		 	type: "POST",  
+			  		 	url: "{{Session::get('company')}}/additem",  
+			  		 	data: { item_id: $('#item').attr('data-id') , quantity: $('#cantidad').val() , discount:$('#dto').val() },  
+			  		 	success:  function(result){
+        						console.log(result);
+   						 }
+
+			  		 	});
+			  		 /*
+			  	 	$.post("{{Session::get('company')}}/additem",function(data)
+			  	 	{
+
+			  	 		console.log(data);
+			  	 	});	
+*/
+
 			  	 	var item = $('#item').val();
 			  	 	var cant = $('#cantidad').val();
 			  	 	var dto  = $('#dto').val();

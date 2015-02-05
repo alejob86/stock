@@ -31,20 +31,21 @@
 			return Response::json($res);
 		});
 
-		Route::get('item_search',function()
+		Route::post('item_search',function()
 		{
-			$data = Input::get('term');
+			$data = Input::get('search');
 
 			$resp = Items::where('code','like','%'.$data.'%')
 					->orWhere('name','like','%'.$data.'%')
 					->orWhere('description','like','%'.$data.'%')
 					->get();
 
-			$res  = array();
+			$res =  array();
 
 			foreach($resp as $r)
 			{
-				array_push($res, $r->name . ' $ '. $r->sell_price );
+				//$res[$r->id]  =  $r->name;
+				$res[] = array('id' => $r->id , 'label' => $r->name .' $ ' . $r->cost_price, 'value' =>$r->name .' $ ' . $r->cost_price);
 			}
 
 			return Response::json($res);

@@ -2,7 +2,9 @@
 
 class PurchasesController extends BaseController
 {
-	protected $data = array();
+	protected $data 	= array();
+	protected $module 	= 'purchase';
+    //protected $moduleId ;
 
 	public function __construct()
 	{
@@ -12,6 +14,7 @@ class PurchasesController extends BaseController
 		$this->data['seccion']		= '';
 	}
 
+	/*
 	public function newPurchase()
 	{
 		$this->data['seccion']		= 'Nueva';
@@ -21,74 +24,74 @@ class PurchasesController extends BaseController
 
 
 	//*************************************************************************
-	protected $module = 'purchase';
-    protected $moduleId ;
+
 
    
-    public function __construct()
+   /* public function __construct()
     {
         $this->moduleId = Module::where('name','=',$this->module)->first()->id;
     }
-	
+	*/
 
+	/*
 	public function getIndex()
 	{
-		 /* Validation Mechanism read, add, delete, edit */
-		if(!parent::validarPermisos($this->moduleId, 'read'))
-        {
-            return Redirect::back()->with('warning','Acceso denegado a esta seccion');
-        }		 
-		
+	
+		/* Validation Mechanism read, add, delete, edit 
+
 		$data['module'] = $this->module;
 
 		return View::make('stock.purchase.index')->with($data);
 	}
-
+	*/
 
 	public function getNew()
 	{
-		/* Validation Mechanism read, add, delete, edit */
-		if(!parent::validarPermisos($this->moduleId, 'add'))
-        {
-            return Redirect::back()->with('warning','Acceso denegado a esta seccion');
-        }
+		$this->data['seccion']		= 'Nueva';
 		
 
-		$action         			= 'create';
-		$purchase_temporal  		= new PurchasesTemporal();
-		$purchase_temporal->save();
+		if(!Session::has('purchase_temporal_id')){
 
-		// We must delete any temporal id saved, and set the session attribute again
+			$purchase_temporal = new PurchasesTemporal();
+			$purchase_temporal->save();
 
-		Session::put('purchase_temporal_id',$purchase_temporal->id);
-
-
-		$data['action']  	= $action;
-		$data['model']	 	= $purchase_temporal;
-		$data['module']  	= $this->module;
-		$data['total']   	= null;
-
-
-		return View::make('stock.purchase.new')->with($data);
+			// We must delete any temporal id saved, and set the session attribute again
+			Session::put('purchase_temporal_id',$purchase_temporal->id);
+		}
+		
+		return View::make('purchases.purchases_new')->with($this->data);
 	}
 
 
 	public function postAdditem()
 	{
-		$purchase_temporal_id			= Session::get('purchase_temporal_id');
-		$input 							= Input::all();
 
-		$purchases_items 						= new PurchasesItems(); 
-		$purchases_items->item_id 				= $input['item_id'];
-		$purchases_items->purchase_temporal_id 	= $purchase_temporal_id;
-		$purchases_items->quantity 				= $input['quantity'];
-		$purchases_items->discount 				= $input['discount'];
-		$purchases_items->price_per_unit		= Item::find($purchases_items->item_id)->cost_price;
+		$purchase_temporal_id					= Session::get('purchase_temporal_id');
+		$input 									= Input::all();
+
+		$purchases_items 							= new PurchasesItems();
+
+		$purchases_items->items_id 					= $input['item_id'];
+
+		$purchases_items->purchases_temporal_id 	= $purchase_temporal_id;
+
+		$purchases_items->quantity 					= $input['quantity'];
+
+		$purchases_items->discount 					= $input['discount'];
+
+		$purchases_items->price_per_unit			= Items::find($purchases_items->items_id)->cost_price;
+
+
+
 		$purchases_items->save();
 
+			
+						return Response::json($purchases_items);
 
-		$data['module']  = $this->module;
-		$data['total']   = null;
+		//$data['module']  = $this->module;
+		//$data['total']   = null;
+
+		return Response::json($purchases_items);
 
 		return View::make('stock.purchase.new')->with($data);
 	}
@@ -111,6 +114,7 @@ class PurchasesController extends BaseController
 
 	public function postNewpurchase()
 	{
+
 
 		$purchase_temporal_id	= Session::get('purchase_temporal_id');
 		$purchasesitems 		= PurchasesItems::where('purchase_temporal_id','=',$purchase_temporal_id)->get();
