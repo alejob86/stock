@@ -9,5 +9,10 @@ class Items extends Eloquent
 	{
 		return $this->hasMany('PurchasesItems');
 	}
+
+	public function categories()
+	{
+		return $this->belongsToMany('Categories','items_categories','item_id','category_id');
+	}
 }
 ?>

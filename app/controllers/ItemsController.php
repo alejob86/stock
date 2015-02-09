@@ -15,54 +15,68 @@ class ItemsController extends BaseController
 
 	public function postNew()
 	{
+		// Receive data
 
-		$input 		= Input::all();
+			$input 		= Input::all();
 
-		 if(isset($input['chk_category'])){
-		 	$categories = $input['chk_category'];	
-		 }
+			$categories = Input::has('chk_category') ? Input::get('chk_category') : array();
 
-		unset($input['chk_category']);
+			$up 		= new upload();
+			
+			//unset($input['chk_category']);
 
-		$up 		= Upload::up($input['image'] , $this->img_path);
+		// Create the objet
 
-		if( $up != false )
-		{
-			$input['image'] =  $this->img_path .$up;
-		}
+			$item 		= new Items();
 
-		$item = Items::Create($input);
+		// Populate the objet
 
-		if($item)
-		{
-			if (isset($categories))
-			{	
-				foreach ( $categories as $category )
+			// Input Data
+
+				$item->code = $input['code'];
+				$item->name = $input['name'];
+				$item->description = $input['description'];
+				$item->provider_id = $input['provider_id'];
+				$item->cost_price  = $input['cost_price'];
+				$item->sell_price  = $input['sell_price'];
+				//$item->expiration_date = $input['expiration_date'];
+				$item->stock           = $input['stock'];
+				$item->image 		   = $input['image'];
+				$item->rent_price_15_days = $input['rent_price_15_days'];
+				$item->rent_price_45_days = $input['rent_price_45_days'];
+				$item->total_weight		  = $input['total_weight'];
+				//$item->maximum_weight	  = $input['maximum_weight'];
+				$item->color 			  = $input['color'];
+				$item->size 			  = $input['size'];
+				//$item->dimensions 		  = $input['dimensions'];
+				//$item->presentation 	  = $input['presentation'];
+
+			// Input Categories
+
+				$item->categories()->sync($categories);
+
+			// Input Image
+
+				$up 				= $up->up($input['image'] , $this->img_path);
+
+				if( $up != false )
 				{
-					$itemsCategories 				= new ItemsCategories();
-					$itemsCategories->item_id 		= $item->id;
-					$itemsCategories->category_id 	= $category;
-					$itemsCategories->save();	
+					$input['image'] =  $this->img_path .$up;
 				}
-				return Redirect::back()->with('success','Registro Creado Correctamente');
-			}
-			else
-			{
-				return Redirect::back()->with('warning','Ocurrio un error asociando los items');
-			}
-					
-		}
-		else
-		{
-			return Redirect::back()->with('warning','Ocurrio un error creando el Registro');
-		}	
+
+
+		// Save the object
+
+			$item->save();
+			
+			return Redirect::to('item')->with('success','Registro Editado Correctamente');
+	
 	}
 
 
 	//post edit
 	public function postEdit($id = null)
 	{	
-
 		$input 		= Input::all();
 
 		 if(isset($input['chk_category'])){
@@ -70,8 +84,6 @@ class ItemsController extends BaseController
 		 }
 
 		unset($input['chk_category']);
-
-
 
 		$model = $this->data['model'];
 	 	$model = $model::find($id);
