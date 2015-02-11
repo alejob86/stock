@@ -1,4 +1,4 @@
-	
+
   {{Form::texto('code','Codigo', array('required'))}}
   {{Form::texto('name','Nombre')}}
   {{Form::texto('description','Descripcion')}}
@@ -21,7 +21,7 @@
       </div>
       <div id="2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
         <div class="panel-body">    
-           {{ Form::categories('categories') }}    
+           {{ Form::categories('categories', $model_edit) }}    
         </div>
       </div>
     </div>

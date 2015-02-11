@@ -47,7 +47,7 @@
             
         });
 
-    Form::macro('categories', function($name)
+    Form::macro('categories', function($name, $model_edit)
     {
 
         $var = '  <div style="max-height: 200px;  overflow-y: scroll;" >
@@ -55,8 +55,7 @@
                     <ul class="list-group">';
         
             foreach(Categories::orderBy('name','ASC')->get() as $category)
-            {
-                /*
+            {                
                     if(isset($model_edit) && ItemsCategories::where('item_id','=',$model_edit->id,'AND', 'category_id','=',$category->id))
                     {                    
                         $checked = "checked";
@@ -64,10 +63,11 @@
                     {
                         $checked = "";
                     }
-                */
+                
                 $var .= '<li class="list-group-item">
                             <input type="checkbox" name="chk_category[]"  
-                                value="'.$category->id.'"
+                                value="'.$category->id.'" 
+                                '.$checked.'
                             >  '.$category->name.'</li>'; 
             } 
                                         
