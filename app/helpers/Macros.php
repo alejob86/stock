@@ -47,7 +47,7 @@
             
         });
 
-    Form::macro('categories', function($name, $model_edit)
+    Form::macro('categories', function($name)
     {
 
         $var = '  <div style="max-height: 200px;  overflow-y: scroll;" >

@@ -21,7 +21,7 @@
       </div>
       <div id="2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
         <div class="panel-body">    
-           {{ Form::categories('categories', $model_edit) }}    
+           {{ Form::categories('categories') }}    
         </div>
       </div>
     </div>
