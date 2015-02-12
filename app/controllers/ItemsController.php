@@ -65,10 +65,10 @@ class ItemsController extends BaseController
 					if( $up != false )
 					{
 						$input['image'] =  $this->img_path.$up;
-						$items->image   =  $input['image'];
+						$item->image   =  $input['image'];
 					}else
 					{
-						$items->image   =  "";
+						$item->image   =  "";
 					}
 
 				}
