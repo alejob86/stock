@@ -12,7 +12,7 @@ class Items extends Eloquent
 
 	public function categories()
 	{
-		return $this->belongsToMany('Categories','items_categories','item_id','category_id');
+		return $this->belongsToMany('Categories','items_categories','items_id','categories_id');
 	}
 }
 ?>

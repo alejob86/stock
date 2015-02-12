@@ -49,27 +49,30 @@
 
     Form::macro('categories', function($name)
     {
-
-        $var = '  <div style="max-height: 200px;  overflow-y: scroll;" >
+        
+        // Retrieves the id from the model when it comes from the edit side
+        $id = Form::getValueAttribute('id');
+                
+        $var        = '  <div style="max-height: 200px;  overflow-y: scroll;" >
             
                     <ul class="list-group">';
         
-            foreach(Categories::orderBy('name','ASC')->get() as $category)
-            {                
-                    if(isset($model_edit) && ItemsCategories::where('item_id','=',$model_edit->id,'AND', 'category_id','=',$category->id))
-                    {                    
-                        $checked = "checked";
-                    }else
-                    {
-                        $checked = "";
-                    }
-                
-                $var .= '<li class="list-group-item">
-                            <input type="checkbox" name="chk_category[]"  
-                                value="'.$category->id.'" 
-                                '.$checked.'
-                            >  '.$category->name.'</li>'; 
-            } 
+        foreach(Categories::orderBy('name','ASC')->get() as $category)
+        {     
+                        
+            if($itemscategories = ItemsCategories::where('items_id','=',$id)->where('categories_id','=',$category->id)->first())
+            {
+               $checked = "checked";
+            }else{
+               $checked = "";
+            }
+            
+            $var .= '<li class="list-group-item">
+                        <input type="checkbox" name="chk_category[]"  
+                            value="'.$category->id.'" 
+                            '.$checked.'
+                        >  '.$category->name.'</li>'; 
+        } 
                                         
             
         $var .= '</ul></div>';
