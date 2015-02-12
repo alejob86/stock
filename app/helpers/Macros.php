@@ -58,8 +58,8 @@
                     <ul class="list-group">';
         
         foreach(Categories::orderBy('name','ASC')->get() as $category)
-        {     
-                        
+        {
+
             if($itemscategories = ItemsCategories::where('items_id','=',$id)->where('categories_id','=',$category->id)->first())
             {
                $checked = "checked";

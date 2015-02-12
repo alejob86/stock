@@ -51,6 +51,8 @@ class ItemsController extends BaseController
 				//$item->dimensions 		  = $input['dimensions'];
 				//$item->presentation 	  = $input['presentation'];
 
+				$item->save();
+
 			// Input Categories
 
 				$item->categories()->sync($categories);
