@@ -41,7 +41,7 @@ class ItemsController extends BaseController
 				$item->sell_price  = $input['sell_price'];
 				//$item->expiration_date = $input['expiration_date'];
 				$item->stock           = $input['stock'];
-				$item->image 		   = $input['image'];
+				//$item->image 		   = $input['image'];
 				$item->rent_price_15_days = $input['rent_price_15_days'];
 				$item->rent_price_45_days = $input['rent_price_45_days'];
 				$item->total_weight		  = $input['total_weight'];
@@ -64,8 +64,13 @@ class ItemsController extends BaseController
 
 					if( $up != false )
 					{
-						$input['image'] =  $this->img_path .$up;
+						$input['image'] =  $this->img_path.$up;
+						$items->image   =  $input['image'];
+					}else
+					{
+						$items->image   =  "";
 					}
+
 				}
 				
 		// Save the object
@@ -106,7 +111,7 @@ class ItemsController extends BaseController
 				$item->sell_price  = $input['sell_price'];
 				//$item->expiration_date = $input['expiration_date'];
 				$item->stock           = $input['stock'];
-				$item->image 		   = $input['image'];
+				//$item->image 		   = $input['image'];
 				$item->rent_price_15_days = $input['rent_price_15_days'];
 				$item->rent_price_45_days = $input['rent_price_45_days'];
 				$item->total_weight		  = $input['total_weight'];
@@ -128,6 +133,10 @@ class ItemsController extends BaseController
 					if( $up != false )
 					{
 						$input['image'] =  $this->img_path .$up;
+						$item->image   =  $input['image'];
+					}else
+					{
+						$item->image   =  "";
 					}
 				}
 				
