@@ -2,7 +2,7 @@
 
 class Obras extends Eloquent
 {
-	protected $table 	= 'obrassociales';
+	protected $table 	= 'obras_sociales';
 	protected $guarded 	= array('');
 }
 ?>

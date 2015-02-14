@@ -11,7 +11,7 @@ class CreateObrassociales extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('obrassociales', function($newtable)
+		Schema::create('obras_sociales', function($newtable)
         {
 		   $newtable->increments('id');
 		   $newtable->string('name', 100);
@@ -36,6 +36,6 @@ class CreateObrassociales extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('obrassociales');
+		Schema::drop('obras_sociales');
 	}
 }
