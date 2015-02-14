@@ -30,8 +30,7 @@
 					<li class="divider"></li>
 					<li><a href="{{route('purchases')}}">Compras</a></li>
 					<li><a href="{{route('clients')}}">Ventas</a></li>
-					<li class="divider"></li>
-					<li><a href="{{route('users')}}">Usuarios</a></li>
+
 
 
 				</ul>
@@ -52,7 +51,7 @@
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Usuarios</a></li>
+					<li><a href="{{route('users')}}">Usuarios</a></li>
 					<li><a href="#">Perfiles</a></li>
 				</ul>
 			</li>

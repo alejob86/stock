@@ -22,7 +22,7 @@
 					<td>{{$models->address}} {{$models->city}}  {{$models->province}} </td>
 					<td>{{$models->zip_code}}</td>
 					<td>{{$models->telephone}} / {{$models->fax}}</td>
-					<td>{{$models->mail}}</td>
+					<td>{{$models->email}}</td>
 					<td>{{$models->iva_conditions}}</td>
 					<td>{{$models->observations}}</td>
 					
