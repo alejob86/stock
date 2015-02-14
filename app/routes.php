@@ -132,6 +132,8 @@ Route::group(array('prefix'=> Session::get('company') ),function()
 		require(__DIR__ . '/routes/clients.php');
 		require(__DIR__ . '/routes/purchases.php');
 		require(__DIR__ . '/routes/categories.php');
+		require(__DIR__ . '/routes/obras.php');
+
 
 		//config 
 		require(__DIR__ . '/routes/config/users.php');

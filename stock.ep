@@ -54,7 +54,7 @@
             <use xlink:href="#1e8727a39d9eed4c9de488c10fdf827d" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="6d5af3f85e8e3c41aec4aed6db5a4a6f" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="1535a0711b63b24cafbab4afef63a37f" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#1e8727a39d9eed4c9de488c10fdf827d" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="1fb2fca7f2cd1a4ab4e1de814defc0fe" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="1fb2fca7f2cd1a4ab4e1de814defc0fe" dx="-16"/>
                 </textPath>
             </text>
 
@@ -66,7 +66,7 @@
             <use xlink:href="#3b7508ab259d3449b0501b87e7f42d48" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="aa629fb5231bbd43a7a8039e47971b68" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="50d6f45bf2ed7944a643adec23c50abf" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#3b7508ab259d3449b0501b87e7f42d48" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="d0ca20062f2f0243af626bc2fe86ecc6" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="d0ca20062f2f0243af626bc2fe86ecc6" dx="-16"/>
                 </textPath>
             </text>
 
@@ -78,7 +78,7 @@
             <use xlink:href="#b4712e6328cce347b5c732661630d25a" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="4b5a54679ec8d841a66ca7479e383219" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="179fea5c37f6104084241f2e44a72a18" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#b4712e6328cce347b5c732661630d25a" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="fb2f6e875746b546b2a0b5003fc516e4" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="fb2f6e875746b546b2a0b5003fc516e4" dx="-16"/>
                 </textPath>
             </text>
 
@@ -90,7 +90,7 @@
             <use xlink:href="#159077c17540a74ea8f721b7a7238f33" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="d3b4e149502a034eaa8be45dd84530c3" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="0ffe4251a0e7c4459d716a21d3731251" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#159077c17540a74ea8f721b7a7238f33" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="d84a46bcb12fc049b54ccc3f98f0812d" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="d84a46bcb12fc049b54ccc3f98f0812d" dx="-16"/>
                 </textPath>
             </text>
 
@@ -110,7 +110,7 @@
             <use xlink:href="#2d3cae390a10504f8853398ea6e6347f" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="c962c36769142f4eb46159c06eb56cd5" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="d9a857b288deb64887210ca84ab2afb5" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#2d3cae390a10504f8853398ea6e6347f" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="4ad0ab23429b8b4e87958128c837259f" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="4ad0ab23429b8b4e87958128c837259f" dx="-16"/>
                 </textPath>
             </text>
 
@@ -122,7 +122,7 @@
             <use xlink:href="#d17c8abad10565489adc5274cf34b41d" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="ad680d477f55a04280b6c8c195fdfa3c" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="d7f436250853f146bb243c1080e6b0aa" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#d17c8abad10565489adc5274cf34b41d" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="99bcb020aedcae4e9d7e53cd6a029111" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="99bcb020aedcae4e9d7e53cd6a029111" dx="-16"/>
                 </textPath>
             </text>
 
@@ -134,7 +134,7 @@
             <use xlink:href="#9af820ae9e262b4796f32d31eeea5747" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="34f0e057d02fa54faa974208710faf22" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="fe3f993a5c6d6142882e6eac19ef85b6" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#9af820ae9e262b4796f32d31eeea5747" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="00f2e36d9d945943ad43bbf88bf85cf7" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="00f2e36d9d945943ad43bbf88bf85cf7" dx="-16"/>
                 </textPath>
             </text>
 
@@ -155,7 +155,7 @@
             <use xlink:href="#cf88269f797e204183b340a8705b15a6" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="1150a0b79afd374bb56e6cfc5abd9a7b" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="b9978b4151a8924e9fd7187edcb9108b" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#cf88269f797e204183b340a8705b15a6" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="8fe539072230e749b244a5ff65f392d8" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="8fe539072230e749b244a5ff65f392d8" dx="-16"/>
                 </textPath>
             </text>
 
@@ -167,14 +167,14 @@
             <use xlink:href="#4cec50625c7b5343a6f395a3e4553697" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="5e4b3f3261e04342bc19db69d56e718c" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="86908591e8513f40ba48fa0f483fc04a" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#4cec50625c7b5343a6f395a3e4553697" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="6fa260da4d26bb4c881f5fac25427d1e" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="6fa260da4d26bb4c881f5fac25427d1e" dx="-16"/>
                 </textPath>
             </text>
 
-        </g></Content></Page><Page><Properties><Property name="name">modules</Property><Property name="id">1423883949274_3174</Property><Property name="width">868</Property><Property name="height">545</Property><Property name="dimBackground"/><Property name="transparentBackground">true</Property><Property name="backgroundColor">#FFFFFFFF</Property><Property name="background">transparent</Property></Properties><Content><g xmlns="http://www.w3.org/2000/svg" p:type="Shape" xmlns:p="http://www.evolus.vn/Namespace/Pencil" p:def="Evolus.Common:RichTextBoxV2" id="1a7e33a14104d446a66a85631917b4b3" transform="matrix(1,0,0,1,16,0)"><p:metadata><p:property name="width"><![CDATA[200,0]]></p:property><p:property name="fixedWidth"><![CDATA[false]]></p:property><p:property name="textContent"><![CDATA[<br /><span style="background-color: rgba(255, 0, 0, 0);">1.  Modulo de Articulos</span><br />2.  Modulo de Rubro<br />3.  Modulo de Usuarios<br />4.  Modulo de Perfil<br />5.  Modulo de Proveedores<br />6.  Modulo de Clientes<br />7.  Modulo de Compras<br />8.  Modulo de Ventas<br /><br />9.  Modulo de Médicos<br />10. Modulo de Obras Sociales<br />    Nombre o Sigla<br />    Direccion<br />    Numero<br />    Piso/Dto<br />    Provincia<br />    Ciudad<br />    Codigo Postal<br />    Telefono<br />    Fax<br />    Email<br />    CUIT<br />    Cond IVA<br />    Observaciones<br /><br /><br /><br />11. Modulo de Alquileres<br /><br />12. Modulo de Pagos<br />13. Modulo de Puntajes a Médicos<br />14. Modulo de Costos<br />15. Modulo de Remitos<br />]]></p:property><p:property name="textFont"><![CDATA["Liberation Sans",Arial,sans-serif|normal|normal|13px|none]]></p:property><p:property name="textColor"><![CDATA[#000000FF]]></p:property><p:property name="customStyle"><![CDATA[
+        </g></Content></Page><Page><Properties><Property name="name">modules</Property><Property name="id">1423883949274_3174</Property><Property name="width">868</Property><Property name="height">545</Property><Property name="dimBackground"/><Property name="transparentBackground">true</Property><Property name="backgroundColor">#FFFFFFFF</Property><Property name="background">transparent</Property></Properties><Content><g xmlns="http://www.w3.org/2000/svg" p:type="Shape" xmlns:p="http://www.evolus.vn/Namespace/Pencil" p:def="Evolus.Common:RichTextBoxV2" id="1a7e33a14104d446a66a85631917b4b3" transform="matrix(1,0,0,1,16,0)"><p:metadata><p:property name="width"><![CDATA[200,0]]></p:property><p:property name="fixedWidth"><![CDATA[false]]></p:property><p:property name="textContent"><![CDATA[<br /><span style="background-color: rgba(255, 0, 0, 0);">1.  Modulo de Articulos</span>   -v <br />2.  Modulo de Rubro -v <br />3.  Modulo de Usuarios -v  <br />4.  Modulo de Perfil<br />5.  Modulo de Proveedores<br />6.  Modulo de Clientes -v<br />7.  Modulo de Compras -v<br />8.  Modulo de Ventas <br /><br />9.  Modulo de Médicos -v<br />10. Modulo de Obras Sociales<br />    Nombre o Sigla<br />    Direccion<br />    Numero<br />    Piso/Dto<br />    Provincia<br />    Ciudad<br />    Codigo Postal<br />    Telefono<br />    Fax<br />    Email<br />    CUIT<br />    Cond IVA<br />    Observaciones<br /><br /><br /><br />11. Modulo de Alquileres<br /><br />12. Modulo de Pagos<br />13. Modulo de Puntajes a Médicos<br />14. Modulo de Costos<br />15. Modulo de Remitos<br />]]></p:property><p:property name="textFont"><![CDATA["Liberation Sans",Arial,sans-serif|normal|normal|13px|none]]></p:property><p:property name="textColor"><![CDATA[#000000FF]]></p:property><p:property name="customStyle"><![CDATA[
                 ]]></p:property></p:metadata>
 
             <foreignObject x="0" y="0" width="200" height="525" p:name="htmlObject" id="b2de1f4f13a2374c9817e7f0544b430c" style="color: rgb(0, 0, 0); opacity: 1; font-family: &quot;Liberation Sans&quot;,Arial,sans-serif; font-size: 13px; font-weight: normal; font-style: normal; text-decoration: none;">
-                <div xmlns="http://www.w3.org/1999/xhtml" p:name="textDiv" id="49c061dd47015148a4cca6ae3eba2af4" style="display: inline-block; white-space: nowrap; text-decoration: none;"><div xmlns="http://www.w3.org/1999/xhtml"><br /><span style="background-color: rgba(255, 0, 0, 0);">1.  Modulo de Articulos</span><br />2.  Modulo de Rubro<br />3.  Modulo de Usuarios<br />4.  Modulo de Perfil<br />5.  Modulo de Proveedores<br />6.  Modulo de Clientes<br />7.  Modulo de Compras<br />8.  Modulo de Ventas<br /><br />9.  Modulo de Médicos<br />10. Modulo de Obras Sociales<br />    Nombre o Sigla<br />    Direccion<br />    Numero<br />    Piso/Dto<br />    Provincia<br />    Ciudad<br />    Codigo Postal<br />    Telefono<br />    Fax<br />    Email<br />    CUIT<br />    Cond IVA<br />    Observaciones<br /><br /><br /><br />11. Modulo de Alquileres<br /><br />12. Modulo de Pagos<br />13. Modulo de Puntajes a Médicos<br />14. Modulo de Costos<br />15. Modulo de Remitos<br /></div></div>
+                <div xmlns="http://www.w3.org/1999/xhtml" p:name="textDiv" id="49c061dd47015148a4cca6ae3eba2af4" style="display: inline-block; white-space: nowrap; text-decoration: none;"><div xmlns="http://www.w3.org/1999/xhtml"><br /><span style="background-color: rgba(255, 0, 0, 0);">1.  Modulo de Articulos</span>   -v <br />2.  Modulo de Rubro -v <br />3.  Modulo de Usuarios -v  <br />4.  Modulo de Perfil<br />5.  Modulo de Proveedores<br />6.  Modulo de Clientes -v<br />7.  Modulo de Compras -v<br />8.  Modulo de Ventas <br /><br />9.  Modulo de Médicos -v<br />10. Modulo de Obras Sociales<br />    Nombre o Sigla<br />    Direccion<br />    Numero<br />    Piso/Dto<br />    Provincia<br />    Ciudad<br />    Codigo Postal<br />    Telefono<br />    Fax<br />    Email<br />    CUIT<br />    Cond IVA<br />    Observaciones<br /><br /><br /><br />11. Modulo de Alquileres<br /><br />12. Modulo de Pagos<br />13. Modulo de Puntajes a Médicos<br />14. Modulo de Costos<br />15. Modulo de Remitos<br /></div></div>
             </foreignObject>
         </g></Content></Page></Pages></Document>
