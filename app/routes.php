@@ -65,7 +65,7 @@
 		
 		//	DB::disconnect('mysql');
 		//	Config::set('database.connections.mysql.database','admin_empresa1');
-	//		DB::connect('mysql');
+		//	DB::connect('mysql');
 
 			// Config::set('database.connections.mysql.database','admin_empresa1');
 			//  DB::setDefaultConnection('mysql_tenant');
