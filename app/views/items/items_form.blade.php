@@ -15,7 +15,7 @@
       <div class="panel-heading" role="tab" id="headingTwo">
         <h4 class="panel-title">
           <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#2" aria-expanded="false" aria-controls="collapseTwo">
-          Rubros
+          Categorias
           </a>
         </h4>
       </div>
