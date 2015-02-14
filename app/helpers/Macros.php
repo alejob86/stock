@@ -38,6 +38,15 @@
           	
         });
 
+    Form::macro('pass', function($name, $label)
+        {    
+            $value = Form::getValueAttribute($name);
+            $input = '<input type="password" class="form-control" name="'.$name.'" value='.$value.'>';
+    
+            return buildInput($input,$label);         
+            
+        });
+
     Form::macro('number', function($name, $label, $step, $minimum)
         {    
             $value = Form::getValueAttribute($name);
