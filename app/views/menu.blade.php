@@ -28,6 +28,10 @@
 					<li class="divider"></li>
 					<li><a href="{{route('purchases')}}">Compras</a></li>
 					<li><a href="{{route('clients')}}">Ventas</a></li>
+					<li class="divider"></li>
+					<li><a href="{{route('users')}}">Usuarios</a></li>
+
+
 				</ul>
 			</li>
 	

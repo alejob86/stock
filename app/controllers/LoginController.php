@@ -7,7 +7,7 @@ class LoginController extends BaseController
 		$input    = Input::all();
 		$remember = Input::has('remember') ? true : false ;
 		
-		if(Auth::attempt(array('name' => $input['username'], 'password' => $input['password']),$remember))
+		if(Auth::attempt(array('email' => $input['username'], 'password' => $input['password']),$remember))
 		{
 			//Session::put('company',Auth::user()->company);
 
