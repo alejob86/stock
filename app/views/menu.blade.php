@@ -20,10 +20,11 @@
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-th-list"></i> Menu</a>
 				<ul class="dropdown-menu">
 					<li><a href="inicio"><span class="glyphicon glyphicon-home"></span></a></li>
-					 <li class="divider"></li>
+					<li class="divider"></li>
 					<li><a href="{{route('items')}}">Articulos</a></li>
 					<li><a href="{{route('doctors')}}">Doctores</a></li>
 					<li><a href="{{route('clients')}}">Clientes</a></li>
+					<li><a href="{{route('categories')}}">Categorias</a></li>
 					<li class="divider"></li>
 					<li><a href="{{route('purchases')}}">Compras</a></li>
 					<li><a href="{{route('clients')}}">Ventas</a></li>
