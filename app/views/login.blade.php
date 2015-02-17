@@ -5,7 +5,7 @@
 <div class="container">    
     <div id="loginbox" style="margin-top:50px;" class="mainbox col-xs-4 col-xs-offset-4 ">   
       <div class="text-center">
-        <h1> <strong> { </strong> stock <strong> } </strong> </h1>        
+        <h1> <strong> <img src="{{ URL::asset('assets/images/nav_stock_logo_little.png') }}" > </strong> </h1>        
       </div> 
         <div class="panel " >
             <div style="padding-top:30px" class="panel-body" >    

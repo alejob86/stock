@@ -9,7 +9,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" style='color:#F0AD4E;'> <strong>{</strong> stock <strong>}</strong> </a>
+		<a class="navbar-brand"> <img src="{{ URL::asset('assets/images/nav_stock_logo_little.png') }}" ></a>
 	</div>
 
 

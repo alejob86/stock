@@ -11,6 +11,9 @@
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
+		<!-- Custom Templates -->
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/stylesheet.css') }}" >
+
 		<style type="text/css">
 			body
 			{
