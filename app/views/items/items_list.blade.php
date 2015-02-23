@@ -6,15 +6,15 @@
 				<th>Codigo</th>
 				<th>Nombre</th>
 				<th>Descripcion</th>
+				<th>Precio al publico</th>
 				<th></th>
 			</tr>
 		</thead>
 		<tbody>			
-				@foreach($model  as $models)
+				@foreach($model as $models)
 				<tr>
 					<td>
 						<a href="#" class="thumbnail">
-
 							@if(!is_null($models->image))
 								<img src="{{$models->image}}" width="100%">	
 							@else
@@ -25,6 +25,7 @@
 					<td>{{$models->code}}</td>
 					<td>{{$models->name}}</td>
 					<td>{{$models->description}}</td>
+					<td>{{$models->sell_price}}</td>
 					<td>
 						<div class="btn-group btn-group-xs">
 							<a href="{{route($ruta.'_edit_form',$models->id)}}" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-edit"></i></a>
