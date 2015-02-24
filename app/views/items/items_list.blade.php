@@ -15,8 +15,8 @@
 				<tr>
 					<td>						
 							@if(!is_null($models->image) && $models->image != "")
-								<a href="{{$models->image}}" target="_blank" class="thumbnail">
-									<img src="{{$models->image}}" width="100%">	
+								<a href="{{ $models->image }}" target="_blank" class="thumbnail">
+									<img src="{{ URL::to('/public/assets/').$models->image }}" width="100%">	
 								</a>
 							@else
 								<a href="no_image.png" target="_blank">

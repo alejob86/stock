@@ -14,8 +14,8 @@
 	
 				$date 	  		=  new DateTime();	
 				$filename 		=  $date->getTimestamp().".".$file->getClientOriginalExtension();
-				$path	        =  "public/".$path;
-				$upload_success =  $file->move($path , $filename);
+			
+				$upload_success =  $file->move(public_path().'/'.$path , $filename);
 
 				if( $upload_success ) {
 

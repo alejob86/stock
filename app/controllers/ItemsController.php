@@ -3,7 +3,7 @@
 class ItemsController extends BaseController
 {
 	protected $data 	 =  array();
-	protected $img_path  =  "items/images/";
+	protected $img_path  =  "assets/items/images/";
 
 	public function __construct()
 	{
@@ -133,7 +133,7 @@ class ItemsController extends BaseController
 
 					if( $up != false )
 					{						
-						$input['image'] =  $this->img_path .$up;
+						$input['image'] =  $this->img_path."".$up;
 						$item->image   =  $input['image'];
 					}else
 					{
