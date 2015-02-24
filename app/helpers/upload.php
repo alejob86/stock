@@ -9,12 +9,12 @@
 		if($file)
 		{
 			//valida tipo de archivo
-			if($file->getMimeType() == 'image/jpeg' || $file->getMimeType() == 'image/png' ||   $file->getMimeType() == 'application/msword' || $file->getMimeType() == 'application/excel' || $file->getMimeType() == 'application/pdf' || $file->getMimeType() == 'application/zip')
+			if($file->getMimeType() == 'image/jpeg' || $file->getMimeType() == 'image/gif' || $file->getMimeType() == 'image/png' ||   $file->getMimeType() == 'application/msword' || $file->getMimeType() == 'application/excel' || $file->getMimeType() == 'application/pdf' || $file->getMimeType() == 'application/zip')
 			{
 	
 				$date 	  		=  new DateTime();	
 				$filename 		=  $date->getTimestamp().".".$file->getClientOriginalExtension();
-				
+				$path	        =  "public/".$path;
 				$upload_success =  $file->move($path , $filename);
 
 				if( $upload_success ) {

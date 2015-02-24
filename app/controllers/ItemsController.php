@@ -3,7 +3,7 @@
 class ItemsController extends BaseController
 {
 	protected $data 	 =  array();
-	protected $img_path  =  'items/images/';
+	protected $img_path  =  "items/images/";
 
 	public function __construct()
 	{
@@ -65,10 +65,10 @@ class ItemsController extends BaseController
 					if( $up != false )
 					{
 						$input['image'] =  $this->img_path.$up;
-						$item->image   =  $input['image'];
+						$item->image    =  $input['image'];
 					}else
 					{
-						$item->image   =  "";
+						$item->image    =  "";
 					}
 
 				}
@@ -128,10 +128,11 @@ class ItemsController extends BaseController
 			// Input Image
 				if(isset($input['image']))
 				{
+
 					$up 				= $up->up($input['image'] , $this->img_path);
 
 					if( $up != false )
-					{
+					{						
 						$input['image'] =  $this->img_path .$up;
 						$item->image   =  $input['image'];
 					}else

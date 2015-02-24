@@ -13,14 +13,16 @@
 		<tbody>			
 				@foreach($model as $models)
 				<tr>
-					<td>
-						<a href="#" class="thumbnail">
-							@if(!is_null($models->image))
-								<img src="{{$models->image}}" width="100%">	
+					<td>						
+							@if(!is_null($models->image) && $models->image != "")
+								<a href="{{$models->image}}" target="_blank" class="thumbnail">
+									<img src="{{$models->image}}" width="100%">	
+								</a>
 							@else
-								<img src="no_image.png" width="100%">	
-							@endif
-						</a>
+								<a href="no_image.png" target="_blank">
+									<img src="no_image.png" width="100%">	
+								</a>
+							@endif						
 					</td>
 					<td>{{$models->code}}</td>
 					<td>{{$models->name}}</td>
