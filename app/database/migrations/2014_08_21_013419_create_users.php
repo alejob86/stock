@@ -19,9 +19,11 @@ class CreateUsers extends Migration {
 		   $newtable->string('email', 100);
 		   $newtable->string('password', 500);
 		   $newtable->string('remember_token', 500);
-		   $newtable->integer('profile_id')->nullable()->unsigned();		   
-		   $newtable->timestamps();
+		   $newtable->integer('profile_id')->nullable()->unsigned();
 
+		   $newtable->timestamps();
+		   $newtable->softDeletes();
+		   
 		   $newtable->foreign('profile_id')->references('id')->on('profiles');
         });
 	}

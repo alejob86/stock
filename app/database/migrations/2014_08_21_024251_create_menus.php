@@ -16,9 +16,11 @@ class CreateMenus extends Migration {
 		   $newtable->increments('id');
 		   $newtable->string('name', 200);
 		   $newtable->string('icon', 100);
-		   $newtable->integer('module_id')->nullable()->unsigned();		   
-		   $newtable->timestamps();
+		   $newtable->integer('module_id')->nullable()->unsigned();	
 
+		   $newtable->timestamps();
+		   $newtable->softDeletes();
+		   
 		   $newtable->foreign('module_id')->references('id')->on('modules');
         });
 	}

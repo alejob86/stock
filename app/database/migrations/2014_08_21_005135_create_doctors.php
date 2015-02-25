@@ -22,6 +22,7 @@ class CreateDoctors extends Migration {
 		   $newtable->string('cell_phone', 100);
 		   $newtable->string('license', 40);
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
         });
 	}
 

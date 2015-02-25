@@ -15,7 +15,9 @@ class CreateProfiles extends Migration {
 		{
 			$newtable->increments('id');
 			$newtable->string('profile', 500);
+			
 			$newtable->timestamps();
+			$newtable->softDeletes();
 		});
 	}
 

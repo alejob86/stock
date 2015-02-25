@@ -18,6 +18,7 @@ class CreateSales extends Migration {
 		   $newtable->integer('client_id')->nullable()->unsigned();
 		   $newtable->float('amount');		   
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
 		   $newtable->foreign('client_id')->references('id')->on('clients');
         });
 	}

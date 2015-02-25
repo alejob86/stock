@@ -38,9 +38,7 @@
 				@endforeach
 		</tbody>
 	</table>
-
 	<ul class="pagination">
 		{{ $model->links() }}
 	</ul>
-
 </div>

@@ -18,9 +18,10 @@ class CreateItemsCategories extends Migration {
 		   $newtable->integer('categories_id')->nullable()->unsigned();
 		   		   
 		   $newtable->timestamps();
-
-		   $newtable->foreign('items_id')->references('id')->on('items');
-		   $newtable->foreign('categories_id')->references('id')->on('categories');
+		   $newtable->softDeletes();
+		   
+		   $newtable->foreign('items_id')->references('id')->on('items')->onDelete('cascade');
+		   $newtable->foreign('categories_id')->references('id')->on('categories')->onDelete('cascade');
         });
 	}
 

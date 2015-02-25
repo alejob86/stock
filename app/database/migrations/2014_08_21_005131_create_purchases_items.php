@@ -21,6 +21,7 @@ class CreatePurchasesItems extends Migration {
 		   $newtable->float('discount');
 		   $newtable->float('price_per_unit');		   		   
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
 		   $newtable->foreign('purchase_id')->references('id')->on('purchases');
 		   $newtable->foreign('purchase_temporal_id')->references('id')->on('purchases_temporal');
 		   $newtable->foreign('item_id')->references('id')->on('items');

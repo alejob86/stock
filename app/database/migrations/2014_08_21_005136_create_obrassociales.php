@@ -11,7 +11,7 @@ class CreateObrassociales extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('obras_sociales', function($newtable)
+		Schema::create('obrassociales', function($newtable)
         {
 		   $newtable->increments('id');
 		   $newtable->string('name', 100);
@@ -25,7 +25,10 @@ class CreateObrassociales extends Migration {
 		   $newtable->string('cuit', 100);
 		   $newtable->string('iva_conditions', 100);
 		   $newtable->string('observations', 100);
+
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
+		   
         });
 	}
 

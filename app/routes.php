@@ -44,7 +44,6 @@
 
 			foreach($resp as $r)
 			{
-				//$res[$r->id]  =  $r->name;
 				$res[] = array('id' => $r->id , 'label' => $r->name .' $ ' . $r->cost_price, 'value' =>$r->name .' $ ' . $r->cost_price);
 			}
 
@@ -68,7 +67,7 @@
 
 		Route::get('update',function()
 		{
-			return 	DBupdate::getUpdate();
+			return 	DBupdate::up();
 		});
 
 

@@ -31,7 +31,10 @@ class CreateItems extends Migration {
 		   $newtable->string('dimensions', 100);
 		   $newtable->string('presentation', 100);
 		   $newtable->integer('provider_id')->nullable()->unsigned();
+
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
+		   
 		   $newtable->foreign('provider_id')->references('id')->on('profiles');
         });
 	}

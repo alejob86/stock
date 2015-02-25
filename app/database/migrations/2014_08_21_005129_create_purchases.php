@@ -18,6 +18,7 @@ class CreatePurchases extends Migration {
 		   $newtable->integer('provider_id')->nullable()->unsigned();
 		   $newtable->float('amount');		   
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
 		   $newtable->foreign('provider_id')->references('id')->on('providers');
         });
 	}

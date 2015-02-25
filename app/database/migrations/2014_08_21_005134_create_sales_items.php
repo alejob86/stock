@@ -21,6 +21,7 @@ class CreateSalesItems extends Migration {
 		   $newtable->float('discount');
 		   $newtable->float('price_per_unit');		   		   
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
 		   $newtable->foreign('sale_id')->references('id')->on('sales');
 		   $newtable->foreign('sale_temporal_id')->references('id')->on('sales_temporal');
 		   $newtable->foreign('item_id')->references('id')->on('items');

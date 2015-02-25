@@ -15,7 +15,9 @@ class CreateCategories extends Migration {
         {
 		   $newtable->increments('id');
 		   $newtable->string('name', 200);
+		   
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
         });
 	}
 

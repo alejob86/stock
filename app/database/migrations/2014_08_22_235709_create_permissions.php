@@ -19,8 +19,10 @@ class CreatePermissions extends Migration {
 			$newtable->boolean('edit');
 			$newtable->boolean('delete');
 			$newtable->boolean('add');
-			$newtable->timestamps();
 
+			$newtable->timestamps();
+			$newtable->softDeletes();
+			
 			$newtable->foreign('module_id')->references('id')->on('modules');
 			$newtable->foreign('profile_id')->references('id')->on('profiles');
 		});

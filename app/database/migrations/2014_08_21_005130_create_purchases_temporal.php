@@ -19,6 +19,7 @@ class CreatePurchasesTemporal extends Migration {
 		   $newtable->integer('provider_id')->nullable()->unsigned();
 		   $newtable->integer('purchase_id')->nullable()->unsigned();
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
 		   $newtable->foreign('provider_id')->references('id')->on('providers');
 		   $newtable->foreign('purchase_id')->references('id')->on('purchases');
         });

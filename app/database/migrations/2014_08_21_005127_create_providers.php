@@ -23,6 +23,7 @@ class CreateProviders extends Migration {
 		   $newtable->string('company_name', 100);
 		   $newtable->string('cuit', 20);
 		   $newtable->timestamps();
+		   $newtable->softDeletes();
         });
 	}
 

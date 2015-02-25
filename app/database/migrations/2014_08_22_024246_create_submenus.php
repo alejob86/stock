@@ -17,9 +17,11 @@ class CreateSubmenus extends Migration {
 		   $newtable->string('name', 200);
 		   $newtable->string('icon', 100);
 		   $newtable->integer('menu_id')->nullable()->unsigned();
-		   $newtable->integer('module_id')->nullable()->unsigned();		   		   
-		   $newtable->timestamps();
+		   $newtable->integer('module_id')->nullable()->unsigned();	
 
+		   $newtable->timestamps();
+		   $newtable->softDeletes();
+		   
 		   $newtable->foreign('menu_id')->references('id')->on('menus');
 		   $newtable->foreign('module_id')->references('id')->on('modules');
         });
