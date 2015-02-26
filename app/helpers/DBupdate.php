@@ -15,38 +15,37 @@ class DBupdate
 
 	public static function up()
 	{
-		/*
-			Schema::table('categories', function($table)
-			{
-				$table->softDeletes();
-			});
+	
+		Schema::table('categories', function($table)
+		{
+			$table->softDeletes();
+		});
 
-			Schema::table('clients', function($table)
-			{
-				$table->softDeletes();
-			});
+		Schema::table('clients', function($table)
+		{
+			$table->softDeletes();
+		});
+	
+		Schema::table('company_db', function($table)
+		{
+			$table->softDeletes();
+		});
+	
+		Schema::table('doctors', function($table)
+		{
+			$table->softDeletes();
+		});
+
+		Schema::table('items', function($table)
+		{
+			$table->softDeletes();	
+		});
+
+		Schema::table('items_categories', function($table)
+		{
+			$table->softDeletes();
+		});
 		
-			Schema::table('company_db', function($table)
-			{
-				$table->softDeletes();
-			});
-		
-			Schema::table('doctors', function($table)
-			{
-				$table->softDeletes();
-			});
-
-			Schema::table('items', function($table)
-			{
-				$table->softDeletes();	
-			});
-
-			Schema::table('items_categories', function($table)
-			{
-				$table->softDeletes();
-			});
-		*/
-
 		Schema::table('obrassociales', function($table)
 		{
 			$table->softDeletes();	
