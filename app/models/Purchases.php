@@ -6,8 +6,8 @@ class Purchases extends Eloquent
 	/** 
      * Soft Delete
 	 */
-	use SoftDeletingTrait;
-    protected $dates = ['deleted_at'];
+	//use SoftDeletingTrait;
+    //protected $dates = ['deleted_at'];
 
 	protected $table	 = 'purchases';
 	protected $guarded	 = array('');

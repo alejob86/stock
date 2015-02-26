@@ -76,48 +76,40 @@
 			Route::post('login',array('as'=>'post_login', 'uses'=>'LoginController@login'));
 
 			Route::get('login',function(){
+				return View::make('login');
+			});
 
-			return View::make('login');
-		});
 
-
-		Route::group(array('before' => 'auth'), function()
-		{
-			//Route::get('inicio', array('as'=>'index', 'uses'=>'HomeController@getInicio'));
-			Route::get('salir',  array('as'=>'logout', 'uses'=>'LoginController@logOut'));
-
-			Route::get('inicio', function()
+			Route::group(array('before' => 'auth'), function()
 			{
-				//return Config::get('database');
-				return View::make('index');
+				//Route::get('inicio', array('as'=>'index', 'uses'=>'HomeController@getInicio'));
+				Route::get('salir',  array('as'=>'logout', 'uses'=>'LoginController@logOut'));
+
+				Route::get('inicio', function()
+				{
+					//return Config::get('database');
+					return View::make('index');
+				});
+
+				Route::post('buscar/', function(){
+					
+					$input 	= Input::all();
+					$model  = $input['model'];
+					$search = $input['buscar'];
+
+					return Redirect::route($input['model'],array($model,$search));
+				});
+
+				require(__DIR__ . '/routes/items.php');
+				require(__DIR__ . '/routes/doctors.php');
+				require(__DIR__ . '/routes/clients.php');
+				require(__DIR__ . '/routes/purchases.php');
+				require(__DIR__ . '/routes/categories.php');
+				require(__DIR__ . '/routes/providers.php');
+				require(__DIR__ . '/routes/obras.php');
+
+				//config 
+				require(__DIR__ . '/routes/config/users.php');
+
 			});
-
-			Route::post('buscar/', function(){
-				
-				$input 	= Input::all();
-				$model  = $input['model'];
-				$search = $input['buscar'];
-
-				return Redirect::route($input['model'],array($model,$search));
-			});
-
-			require(__DIR__ . '/routes/items.php');
-			require(__DIR__ . '/routes/doctors.php');
-			require(__DIR__ . '/routes/clients.php');
-			require(__DIR__ . '/routes/purchases.php');
-			require(__DIR__ . '/routes/categories.php');
-			require(__DIR__ . '/routes/providers.php');
-			require(__DIR__ . '/routes/obras.php');
-
-			//config 
-			require(__DIR__ . '/routes/config/users.php');
-
 		});
-
-
-});
-
-
-
-
-

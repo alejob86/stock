@@ -9,8 +9,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	/** 
      * Soft Delete
 	 */
-	use SoftDeletingTrait;
-    protected $dates = ['deleted_at'];
+	//use SoftDeletingTrait;
+    //protected $dates = ['deleted_at'];
 
 	/**
 	 * The database table used by the model.
