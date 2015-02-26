@@ -24,7 +24,7 @@
 						@yield('extra')
 
 					<div class="col-xs-2 pull-right text-center">
-						<a aria-label="Left Align" href="{{route($ruta.'_new_form')}}" class="btn  btn-warning" data-toggle="modal" data-target="#myModal"> <span class="glyphicon" aria-hidden="true">Agregar</span>
+						<a aria-label="Left Align" href="{{route($ruta.'_new_form')}}" class="btn  btn-warning btn-sm" data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> agregar
 						</a>
 					</div>
 				</div>

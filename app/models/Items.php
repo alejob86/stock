@@ -7,11 +7,12 @@ class Items extends Eloquent
      * Soft Delete
 	 */
 	//use SoftDeletingTrait;
-    //protected $dates = ['deleted_at'];
-    //protected $softDelete = true; 
 
-	protected $table 	= 'items';
-	protected $guarded 	= array('');
+  // protected $dates 		= ['deleted_at'];
+    protected $softDelete 	= true; 
+
+	protected $table 		= 'items';
+	protected $guarded 		= array('');
 
 
 	public function PurchasesItems()
@@ -24,6 +25,7 @@ class Items extends Eloquent
 		return $this->belongsToMany('Categories','items_categories','items_id','categories_id');
 	}
 
+	/*
 	public function delete()
     {
         // delete all related photos 
@@ -35,6 +37,7 @@ class Items extends Eloquent
         // delete the user
         return parent::delete();
     }
+    */
 
 }
 ?>

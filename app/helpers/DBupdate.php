@@ -15,7 +15,7 @@ class DBupdate
 
 	public static function up()
 	{
-	
+	/*
 		Schema::table('categories', function($table)
 		{
 			$table->softDeletes();
@@ -45,8 +45,9 @@ class DBupdate
 		{
 			$table->softDeletes();
 		});
-		
-		Schema::table('obrassociales', function($table)
+		*/
+
+		Schema::table('obras_sociales', function($table)
 		{
 			$table->softDeletes();	
 		});

@@ -9,8 +9,9 @@ class Providers extends Eloquent
 	//use SoftDeletingTrait;
     //protected $dates = ['deleted_at'];
 
-	protected $table 	= 'providers';
-	protected $guarded 	= array('');
+    protected $softDelete 	= true; 
+	protected $table 		= 'providers';
+	protected $guarded 		= array('');
 
 	public function Purchases()
 	{
