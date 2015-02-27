@@ -71,6 +71,10 @@
 			return 	DBupdate::up();
 		});
 
+		Route::get('/',function()
+		{
+			return Redirect::to($empresa.'/login');
+		});
 
 		Route::group(array('prefix'=> Session::get('company') ),function()
 		{
