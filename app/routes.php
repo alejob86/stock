@@ -73,7 +73,7 @@
 
 		Route::get('/',function()
 		{
-			return Redirect::to($empresa.'/login');
+			return Redirect::to('/prueba');
 		});
 
 		Route::group(array('prefix'=> Session::get('company') ),function()
