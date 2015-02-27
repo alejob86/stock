@@ -9,7 +9,7 @@ class Obras extends Eloquent
 	//use SoftDeletingTrait;
     //protected $dates = ['deleted_at'];
 
-	protected $table 	= 'obras_sociales';
+	protected $table 	= 'obrassociales';
 	protected $guarded 	= array('');
 }
 ?>
