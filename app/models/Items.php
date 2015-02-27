@@ -8,7 +8,7 @@ class Items extends Eloquent
 	 */
 	//use SoftDeletingTrait;
     //protected $dates = ['deleted_at'];
-    //protected $softDelete = true; 
+    protected $softDelete = true; 
 
 	protected $table 	= 'items';
 	protected $guarded 	= array('');
