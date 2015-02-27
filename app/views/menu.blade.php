@@ -21,7 +21,7 @@
 					<li><a href="inicio"><span class="glyphicon glyphicon-home"></span></a></li>
 					<li class="divider"></li>
 					<li><a href="{{route('items')}}">Articulos</a></li>
-					<li><a href="{{route('doctors')}}">Doctores</a></li>
+					<li><a href="{{route('doctors')}}">Medicos</a></li>
 					<li><a href="{{route('clients')}}">Clientes</a></li>
 					<li><a href="{{route('categories')}}">Categorias</a></li>
 					<li><a href="{{route('providers')}}">Proveedores</a></li>

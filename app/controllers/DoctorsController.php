@@ -8,7 +8,7 @@ class DoctorsController extends BaseController
 	{
 		$this->data['ruta'] 		= 'doctors';
 		$this->data['model'] 		= 'Doctors';
-		$this->data['modulo'] 		= 'Doctores';
+		$this->data['modulo'] 		= 'Medicos';
 		$this->data['seccion']		= '';
 	}
 }

@@ -1,7 +1,7 @@
-{{Form::texto('name','Nombre del Doctor')}}
-{{Form::texto('last_name','Apellido del Doctor')}}
+{{Form::texto('name','Nombre')}}
+{{Form::texto('last_name','Apellido')}}
 {{Form::texto('dni','DNI (Documento Nacional de Identidad)')}}
 {{Form::texto('email','Email')}}
-{{Form::texto('phone','Tel. Cliente')}}
-{{Form::texto('cell_phone','Cel. Cliente')}}
-{{Form::texto('license','Licencia')}}
+{{Form::texto('phone','Teléfono')}}
+{{Form::texto('cell_phone','Celular')}}
+{{Form::texto('license','Matricula Nacional')}}
