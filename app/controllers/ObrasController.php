@@ -12,5 +12,3 @@ class ObrasController extends BaseController
 		$this->data['seccion']		= '';
 	}
 }
-
-?>

@@ -8,4 +8,3 @@
 	//POST
 	Route::post('categorias_nuevo', 			array('as' => 'categories_post_new', 	'uses' 	=> 'CategoriesController@postNew'));
 	Route::post('categorias_editar/{id?}', 		array('as' => 'categories_post_edit', 	'uses' 	=> 'CategoriesController@postEdit'));
-?>

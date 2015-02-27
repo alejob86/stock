@@ -12,8 +12,5 @@ class InicioController extends BaseController
 		$this->data['modulo'] 		= 'Articulos';
 		$this->data['seccion']		= '';
 	}
-
-
+	
 }
-
-?>

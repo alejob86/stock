@@ -30,4 +30,3 @@ class LoginController extends BaseController
 		return Redirect::to(Session::get('company').'/login');
 	}
 }
-?>

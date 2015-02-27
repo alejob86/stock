@@ -11,7 +11,6 @@
 |I
 */
 
-	
 		Route::get('provider_search',function()
 		{
 			$data = Input::get('term');
@@ -125,6 +124,3 @@
 				});
 			});
 		});
-
-
-

@@ -77,10 +77,8 @@ class ItemsController extends BaseController
 
 			$item->save();
 			
-			return Redirect::back();
-	
+			return Redirect::back();	
 	}
-
 
 	//post edit
 	public function postEdit($id = null)
@@ -147,7 +145,4 @@ class ItemsController extends BaseController
 			
 			return Redirect::back();
 	}
-
 }
-
-?>

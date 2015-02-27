@@ -1,5 +1,4 @@
 @extends('template')
-
 	@section('menu')
 		@include('menu')
 	@endsection
@@ -9,5 +8,4 @@
 		<h3>Empresa : {{Session::get('company')}}</h3>
 		<h4>Usuario : {{Auth::user()->name}}</h4>
 	@endsection
-
 @stop

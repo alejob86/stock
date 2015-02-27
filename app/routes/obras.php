@@ -8,5 +8,3 @@
 
 	Route::post('obrassociales_nuevo', 				array('as' => 'obras_post_new', 	'uses' 	=> 'ObrasController@postNew'));
 	Route::post('obrassociales_editar/{id?}', 		array('as' => 'obras_post_edit', 	'uses' 	=> 'ObrasController@postEdit'));
-
-?>

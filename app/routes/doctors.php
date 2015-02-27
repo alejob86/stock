@@ -8,5 +8,3 @@
 
 	Route::post('doctores_nuevo', 				array('as' => 'doctors_post_new', 	'uses' 	=> 'DoctorsController@postNew'));
 	Route::post('doctores_editar/{id?}', 		array('as' => 'doctors_post_edit', 	'uses' 	=> 'DoctorsController@postEdit'));
-
-?>

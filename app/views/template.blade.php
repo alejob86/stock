@@ -23,7 +23,6 @@
 			}
 
 		</style>
-
 		@yield('css')
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -33,27 +32,21 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
-			@yield('menu')
+		@yield('menu')
 		<div class="container">
-
-@if(App::environment('dev'))
-	<span class="label label-danger">Development...</span>
-@endif
-			@yield('content')
-			
-		</div>
-
-		
+		@if(App::environment('dev'))
+			<span class="label label-danger">Development...</span>
+		@endif
+		@yield('content')			
+		</div>		
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
 		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-			@yield('js')
-			
+		@yield('js')	
 		<script type="text/javascript">
 
 		$('document').ready(function(){
@@ -70,9 +63,6 @@
                 }
 			});
 		});
-			
 		</script>
-
-
 	</body>
 </html>

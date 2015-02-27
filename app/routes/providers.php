@@ -8,4 +8,3 @@
 	//POST
 	Route::post('proveedores_nuevo', 		array('as' => 'providers_post_new', 	'uses' 	=> 'ProvidersController@postNew'));
 	Route::post('proveedores_editar/{id?}', array('as' => 'providers_post_edit', 	'uses' 	=> 'ProvidersController@postEdit'));
-?>

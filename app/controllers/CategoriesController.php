@@ -12,5 +12,3 @@ class CategoriesController extends BaseController
 		$this->data['seccion']		= '';
 	}
 }
-
-?>

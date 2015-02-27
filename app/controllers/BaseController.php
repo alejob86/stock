@@ -24,14 +24,15 @@ class BaseController extends Controller {
 
 		if(isset($search))
 		{
+			//return "busca";
 			$this->data['model'] 	= $model::where('id' ,'like','%'.$search.'%')->orderBy('id' ,'ASC')->paginate('10');
 		}
 		else
 		{
+			//return "no busca";
 			$this->data['model'] 	= $model::orderBy('id' ,'ASC')->paginate('10');
 		}
 			
-
 		return View::make('view')->with($this->data);
 	}
 

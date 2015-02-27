@@ -19,5 +19,3 @@ class ProvidersController extends BaseController
 		$this->data['seccion']		= '';
 	}
 }
-
-?>

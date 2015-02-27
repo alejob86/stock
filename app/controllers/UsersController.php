@@ -43,5 +43,3 @@ class UsersController extends BaseController
 	 	return Redirect::back();
 	}
 }
-
-?>

@@ -8,5 +8,3 @@
 
 	Route::post('clientes_nuevo', 				array('as' => 'clients_post_new', 	'uses' 	=> 'ClientsController@postNew'));
 	Route::post('clientes_editar/{id?}', 		array('as' => 'clients_post_edit', 	'uses' 	=> 'ClientsController@postEdit'));
-	
-?>

@@ -8,4 +8,3 @@
 
 	Route::post('articulos_nuevo', 				array('as' => 'items_post_new', 'uses' 	=> 'ItemsController@postNew'));
 	Route::post('articulos_editar/{id?}', 		array('as' => 'items_post_edit','uses' 	=> 'ItemsController@postEdit'));
-?>

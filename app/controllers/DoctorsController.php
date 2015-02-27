@@ -12,5 +12,3 @@ class DoctorsController extends BaseController
 		$this->data['seccion']		= '';
 	}
 }
-
-?>
