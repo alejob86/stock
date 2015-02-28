@@ -20,10 +20,11 @@ class CreateClients extends Migration {
 		   $newtable->string('email', 100);
 		   $newtable->string('phone', 100);
 		   $newtable->string('cell_phone', 100);
-		   $newtable->string('company_name', 100);
-		   $newtable->string('cuit', 20);
+		   $newtable->integer('obrassociales_id')->nullable()->unsigned();
+		   $newtable->string('address', 100);
 		   $newtable->timestamps();
 		   $newtable->softDeletes();
+		   $newtable->foreign('obrassociales_id')->references('id')->on('obrassociales');
         });
 	}
 

@@ -16,5 +16,10 @@ class Obrassociales extends Eloquent
     public function doctors() {
         return $this->hasMany('Doctors');
     }
+
+	// DEFINE RELATIONSHIPS --------------------------------------------------
+    public function obrassociales() {
+        return $this->hasMany('Clients');
+    }
 }
 ?>

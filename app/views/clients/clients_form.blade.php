@@ -4,5 +4,5 @@
 {{Form::texto('email','Email')}}
 {{Form::texto('phone','Tel. Cliente')}}
 {{Form::texto('cell_phone','Cel. Cliente')}}
-{{Form::texto('company_name','Empresa')}}
-{{Form::texto('cuit','CUIT Cliente')}}
+{{Form::texto('address','Dir')}}
+{{Form::obrassociales('obrassociales_id','Obra Social')}}

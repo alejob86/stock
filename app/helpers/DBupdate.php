@@ -88,20 +88,31 @@ class DBupdate
 		{
 			$table->softDeletes();	
 		});
-		*/
+
 		// CHANGES TO MATCH DOCTORS MODIFICATIONS FROM FERNANDO
 
-			Schema::table('doctors', function($table)
-			{
-				$table->string('license_province', 40)->after('license');
-			});
-		
+		Schema::rename('obras_sociales', 'obrassociales');
 
-			Schema::table('doctors', function($table)
-			{
-				$table->integer('obrassociales_id')->nullable()->unsigned()->after('license');
-				$table->foreign('obrassociales_id')->references('id')->on('obrassociales');
-			});
+		Schema::table('doctors', function($table)
+		{
+			$table->string('license_province', 40)->after('license');
+		});		
+
+		Schema::table('doctors', function($table)
+		{
+			$table->integer('obrassociales_id')->nullable()->unsigned()->after('license');
+			$table->foreign('obrassociales_id')->references('id')->on('obrassociales');
+		});
+		*/
+
+		Schema::table('clients', function($table)
+		{
+			//$table->dropColumn('company_name');
+			//$table->dropColumn('cuit');
+			//$table->integer('obrassociales_id')->nullable()->unsigned()->after('cell_phone');
+			//$table->foreign('obrassociales_id')->references('id')->on('obrassociales');
+			$table->string('address', 100)->after('obrassociales_id');
+		});
 
 	}	
 }

@@ -11,6 +11,12 @@ class Clients extends Eloquent
 
 	protected $table	 = 'clients';
 	protected $guarded	 = array('');
+	
+	// DEFINE RELATIONSHIPS --------------------------------------------------
+    // each Doctor HAS one Obra social 
+    public function obrassociales() {
+        return $this->belongsTo('Obrassociales'); // this matches the Eloquent model
+    }
 }
 
 ?>

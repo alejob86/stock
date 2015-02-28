@@ -40,8 +40,8 @@
     Form::macro('texto', function($name, $label)
         {    
             $value = Form::getValueAttribute($name);
-            $input = '<input class="form-control" name="'.$name.'" value='.$value.'>';
-    
+            $value = htmlspecialchars_decode($value);
+            $input = '<input class="form-control" aria-describedby="sizing-addon3" name="'.$name.'" value="'.$value.'">';
             return buildInput($input,$label);         
           	
         });
@@ -102,14 +102,10 @@
 
 function buildInput($input, $label)
 {
-	$input = '		<div class="row">
-					<div class="col-xs-12">
-						<label class="control-label">'.$label.'</label>
-					</div>
-					<div class="col-xs-12">
-						'.$input.'
-					</div>
-					</div>';
+	$input = '<div class="input-group">
+				 <span class="input-group-addon" id="sizing-addon3 ">'.$label.'</span>	
+				 '.$input.'
+			  </div><br/>';
 
 	return $input;
 }

@@ -50,6 +50,12 @@
 			return Response::json($res);
 		});
 
+		Route::get('/home', function()
+		{
+			$company = Session::get('company');
+
+			return Redirect::to($company.'/inicio');
+		});
 
 		Route::get('/{empresa}', function($empresa)
 		{
@@ -63,8 +69,7 @@
 
 			return Redirect::to($empresa.'/login');
 		});
-
-
+		
 		Route::get('update',function()
 		{
 			return 	DBupdate::up();
