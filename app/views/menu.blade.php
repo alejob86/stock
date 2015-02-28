@@ -25,7 +25,7 @@
 					<li><a href="{{route('clients')}}">Clientes</a></li>
 					<li><a href="{{route('categories')}}">Categorias</a></li>
 					<li><a href="{{route('providers')}}">Proveedores</a></li>
-					<li><a href="{{route('obras')}}">Obras Sociales</a></li>
+					<li><a href="{{route('obrassociales')}}">Obras Sociales</a></li>
 					<li class="divider"></li>
 					<li><a href="{{route('purchases')}}">Compras</a></li>
 					<li><a href="{{route('clients')}}">Ventas</a></li>

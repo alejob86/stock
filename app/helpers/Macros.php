@@ -1,5 +1,13 @@
 <?php
     
+    Form::macro('obrassociales', function($obrassociales_id, $label)
+        {
+            $prov = Obrassociales::lists('name','id');
+            $input = Form::select($obrassociales_id , array('Ninguno') + $prov ,null, array('class'=>'form-control')); 
+
+            return buildInput($input,$label);  
+        });
+
     Form::macro('providers', function($name, $label)
         {
             $prov = Providers::lists('name','id');

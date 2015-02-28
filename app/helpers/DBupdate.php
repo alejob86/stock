@@ -28,7 +28,7 @@ class DBupdate
 
 	public static function up()
 	{
-	/
+		/*
 		Schema::table('categories', function($table)
 		{
 			$table->softDeletes();
@@ -57,8 +57,7 @@ class DBupdate
 		Schema::table('items_categories', function($table)
 		{
 			$table->softDeletes();
-		});
-		
+		});		
 
 		Schema::table('obrassociales', function($table)
 		{
@@ -89,6 +88,21 @@ class DBupdate
 		{
 			$table->softDeletes();	
 		});
+		*/
+		// CHANGES TO MATCH DOCTORS MODIFICATIONS FROM FERNANDO
+
+			Schema::table('doctors', function($table)
+			{
+				$table->string('license_province', 40)->after('license');
+			});
+		
+
+			Schema::table('doctors', function($table)
+			{
+				$table->integer('obrassociales_id')->nullable()->unsigned()->after('license');
+				$table->foreign('obrassociales_id')->references('id')->on('obrassociales');
+			});
+
 	}	
 }
 

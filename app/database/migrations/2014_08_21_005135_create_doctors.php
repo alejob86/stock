@@ -21,8 +21,11 @@ class CreateDoctors extends Migration {
 		   $newtable->string('phone', 100);
 		   $newtable->string('cell_phone', 100);
 		   $newtable->string('license', 40);
+		   $newtable->string('license_province', 40);
+		   $newtable->integer('obrassociales_id')->nullable()->unsigned();
 		   $newtable->timestamps();
 		   $newtable->softDeletes();
+		   $newtable->foreign('obrassociales_id')->references('id')->on('obrassociales');
         });
 	}
 

@@ -28,7 +28,6 @@ class CreateObrassociales extends Migration {
 
 		   $newtable->timestamps();
 		   $newtable->softDeletes();
-		   
         });
 	}
 

@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Obras extends Eloquent
+class Obrassociales extends Eloquent
 {
 	/** 
      * Soft Delete
@@ -11,5 +11,10 @@ class Obras extends Eloquent
 
 	protected $table 	= 'obrassociales';
 	protected $guarded 	= array('');
+
+	// DEFINE RELATIONSHIPS --------------------------------------------------
+    public function doctors() {
+        return $this->hasMany('Doctors');
+    }
 }
 ?>
