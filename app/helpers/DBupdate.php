@@ -103,7 +103,7 @@ class DBupdate
 			$table->integer('obrassociales_id')->nullable()->unsigned()->after('license');
 			$table->foreign('obrassociales_id')->references('id')->on('obrassociales');
 		});
-		*/
+		
 
 		// CHANGES TO MATCH CLIENTS MODIFICATIONS FROM FERNANDO
 
@@ -115,7 +115,7 @@ class DBupdate
 			$table->foreign('obrassociales_id')->references('id')->on('obrassociales');
 			$table->string('address', 100)->after('obrassociales_id');
 		});
-
+		*/
 	}	
 }
 
