@@ -105,12 +105,14 @@ class DBupdate
 		});
 		*/
 
+		// CHANGES TO MATCH CLIENTS MODIFICATIONS FROM FERNANDO
+
 		Schema::table('clients', function($table)
 		{
-			//$table->dropColumn('company_name');
-			//$table->dropColumn('cuit');
-			//$table->integer('obrassociales_id')->nullable()->unsigned()->after('cell_phone');
-			//$table->foreign('obrassociales_id')->references('id')->on('obrassociales');
+			$table->dropColumn('company_name');
+			$table->dropColumn('cuit');
+			$table->integer('obrassociales_id')->nullable()->unsigned()->after('cell_phone');
+			$table->foreign('obrassociales_id')->references('id')->on('obrassociales');
 			$table->string('address', 100)->after('obrassociales_id');
 		});
 
