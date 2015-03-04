@@ -116,6 +116,11 @@ class DBupdate
 			$table->string('address', 100)->after('obrassociales_id');
 		});
 		*/
+		
+		Schema::table('providers', function($table)
+		{
+			$table->string('image', 500)->nullable()->after('cuit');			
+		});
 	}	
 }
 

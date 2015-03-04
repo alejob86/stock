@@ -22,6 +22,7 @@ class CreateProviders extends Migration {
 		   $newtable->string('cell_phone', 100);
 		   $newtable->string('company_name', 100);
 		   $newtable->string('cuit', 20);
+		   $newtable->string('image', 500)->nullable();
 		   $newtable->timestamps();
 		   $newtable->softDeletes();
         });

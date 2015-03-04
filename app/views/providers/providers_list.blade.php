@@ -1,7 +1,8 @@
 <div class="table-responsive">
 	<table class="table table-hover table-striped">
 		<thead>
-			<tr>				
+			<tr>
+				<th width="10%">Image</th>
 				<th>Nombre</th>
 				<th>Apellido</th>
 				<th>Email</th>
@@ -11,7 +12,18 @@
 		</thead>
 		<tbody>			
 				@foreach($model  as $models)
-				<tr>					
+				<tr>
+					<td>						
+						@if(!is_null($models->image) && $models->image != "")
+							<a href="{{ $models->image }}" target="_blank" class="thumbnail">
+								<img src="{{ $models->image }}" width="100%">	
+							</a>
+						@else
+							<a href="no_image.png" target="_blank">
+								<img src="no_image.png" width="100%">	
+							</a>
+						@endif						
+					</td>
 					<td>{{$models->name}}</td>
 					<td>{{$models->last_name}}</td>
 					<td>{{$models->dni}}</td>

@@ -18,4 +18,60 @@ class ProvidersController extends BaseController
 		// Variable that tells where to go according to the function, edit, new, delete
 		$this->data['seccion']		= '';
 	}
+	
+	//post nuevo
+	public function postNew()
+	{	
+		$model = $this->data['model'];
+	 	$model = $model::create(Input::all());
+		
+		// Input Image
+		if(isset($input['image']))
+		{
+			$up			= $up->up($input['image'] , $this->img_path);
+
+			if( $up != false )
+			{
+				$input['image'] =  $this->img_path.$up;
+				$model->image    =  $input['image'];
+			}else
+			{
+				$model->image    =  "";
+			}
+		}
+		
+		$model->save();
+
+	 	return Redirect::back();
+	}
+	
+	//post edit
+	public function postEdit($id = null)
+	{	
+		$model = $this->data['model'];
+	 	$model = $model::find($id);
+
+	 	$model->fill(Input::all());
+	 	
+		
+		// Input Image
+		if(isset($input['image']))
+		{
+			$up			= $up->up($input['image'] , $this->img_path);
+
+			if( $up != false )
+			{
+				$input['image'] =  $this->img_path.$up;
+				$model->image    =  $input['image'];
+			}else
+			{
+				$model->image    =  "";
+			}
+		}
+		
+		$model->save();
+		
+	 	return Redirect::back();
+	}
+	
 }
