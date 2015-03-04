@@ -3,6 +3,7 @@
 class ProvidersController extends BaseController
 {
 	protected $data = array();
+	protected $img_path  =  "assets/providers/images/";
 
 	public function __construct()
 	{
