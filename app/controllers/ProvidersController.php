@@ -25,6 +25,8 @@ class ProvidersController extends BaseController
 	{	
 		$model = $this->data['model'];
 	 	$model = $model::create(Input::all());
+		$input = Input::all();
+		$up    = new upload();
 		
 		// Input Image
 		if(isset($input['image']))
@@ -51,7 +53,8 @@ class ProvidersController extends BaseController
 	{	
 		$model = $this->data['model'];
 	 	$model = $model::find($id);
-
+		$input = Input::all();
+		$up    = new upload();
 	 	$model->fill(Input::all());
 	 	
 		
