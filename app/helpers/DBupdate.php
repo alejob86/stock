@@ -115,11 +115,35 @@ class DBupdate
 			$table->foreign('obrassociales_id')->references('id')->on('obrassociales');
 			$table->string('address', 100)->after('obrassociales_id');
 		});
-		*/
+		
 		
 		Schema::table('providers', function($table)
 		{
 			$table->string('image', 500)->nullable()->after('cuit');			
+		});
+		*/
+
+		Schema::table('profiles', function($table)
+		{
+			$table->increments('id');
+			$table->string('profile', 500);
+			$table->timestamps();
+		});
+
+		Schema::create('permissions', function($newtable)
+		{
+			$newtable->integer('module_id')->nullable()->unsigned();
+			$newtable->integer('profile_id')->nullable()->unsigned();			
+			$newtable->boolean('read');
+			$newtable->boolean('edit');
+			$newtable->boolean('delete');
+			$newtable->boolean('add');
+
+			$newtable->timestamps();
+			$newtable->softDeletes();
+			
+			$newtable->foreign('module_id')->references('id')->on('modules');
+			$newtable->foreign('profile_id')->references('id')->on('profiles');
 		});
 	}	
 }
